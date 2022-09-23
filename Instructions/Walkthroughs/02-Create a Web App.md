@@ -1,34 +1,34 @@
 ---
 wts:
-    title: '02 - Crear una aplicación web (10 minutos)'
-    module: 'Módulo 2 - Servicios principales de Azure (Cargas de trabajo)'
+  title: "2: Crear una aplicación web (10\_minutos)"
+  module: Module 02 - Core Azure Services (Workloads)
 ---
-# 02: Crear una aplicación web (10 min)
+# <a name="02---create-a-web-app-10-min"></a>2: Crear una aplicación web (10 minutos)
 
-En este tutorial, crearemos una aplicación web que ejecuta un contenedor de Docker. El contenedor de Docker contiene un mensaje de bienvenida. 
+In this walkthrough, we will create a web app that runs a Docker container. The Docker container contains a Welcome message. 
 
-Azure App Service es en realidad una colección de cuatro servicios, todos ellos diseñados para ayudarle a hospedar y ejecutar aplicaciones web. Los cuatro servicios (Web Apps, Mobile Apps, API Apps y Logic Apps) tienen aspectos diferentes, pero, al final, todos funcionan de manera muy similar. De los cuatro servicios, las Web Apps son las que se usan con mayor frecuencia y es el servicio que utilizaremos en este laboratorio.
+Azure App Service are actually a collection of four services, all of which are built to help you host and run web applications. The four services (Web Apps, Mobile Apps, API Apps, and Logic Apps) look different, but in the end they all operate in very similar ways. Web Apps are the most commonly used of the four services, and this is the service that we will be using in this lab.
 
-# Tarea 1: Crear una aplicación web 
+# <a name="task-1-create-a-web-app"></a>Tarea 1: Creación de una aplicación web 
 
-En esta tarea, creará una aplicación web de Azure App Service. 
+En esta tarea, creará una aplicación web de Azure App Service. 
 
-1. Inicie sesión en [Azure Portal](http://portal.azure.com/). 
+1. Inicie sesión en el [Portal de Azure](http://portal.azure.com/). 
 
-2. En la hoja **Todos los servicios**, busque y seleccione **App Services** y luego haga clic en **+ Agregar, + Crear, + Nuevo**.
+2. Desde la hoja **Todos los servicios**, busque y seleccione **App Services** y haga clic en **+ Agregar, + Crear, o + Nuevo**.
 
-3. En la pestaña **Datos básicos** de la hoja **Aplicación web**, especifique la siguiente configuración (reemplace **xxxx** en el nombre de la aplicación web por letras y dígitos para que el nombre sea único a nivel mundial). Deje los valores predeterminados para todo lo demás, incluido el plan de App Service. 
+3. On the <bpt id="p1">**</bpt>Basics<ept id="p1">**</ept> tab of the <bpt id="p2">**</bpt>Web App<ept id="p2">**</ept> blade, specify the following settings (replace <bpt id="p3">**</bpt>xxxx<ept id="p3">**</ept> in the name of the web app with letters and digits such that the name is globally unique). Leave the defaults for everything else, including the App Service Plan. 
 
     | Configuración | Valor |
     | -- | -- |
-    | Suscripción | **Utilice la suscripción predeterminada suministrada** |
-    | Grupo de recursos | **Crear un nuevo grupo de recursos**|
+    | Subscription | **Usar los valores predeterminados** |
+    | Grupo de recursos | **Crear un grupo de recursos**|
     | Nombre | **myDockerWebAppxxxx** |
     | Publicar | **Contenedor de Docker** |
     | Sistema operativo | **Linux** |
-    | Región | **Este de EE. UU.** |
+    | Region | **Este de EE. UU.** |
     
-    **Nota:** Recuerde cambiar las **xxxx** para que el nombre de su aplicación web sea único.
+    **Nota:** Recuerde reemplazar **xxxx** para que el nombre de su aplicación web sea único.
 
 4. Haga clic en **Siguiente > Docker** y configure la información del contenedor.  
 
@@ -36,14 +36,14 @@ En esta tarea, creará una aplicación web de Azure App Service.
     | -- | -- |
     | Opciones | **Contenedor individual** |
     | Origen de la imagen | **Docker Hub** |
-    | Tipo de acceso | **Pública** |
-    | Imagen y etiqueta | **mcr.microsoft.com/azuredocs/aci-helloworld** |
+    | Tipo de acceso | **Public** |
+    | Image and tag (Imagen y etiqueta) | **mcr.microsoft.com/azuredocs/aci-helloworld** |
     
  **Nota:** El comando de inicio es opcional y no es necesario en este ejercicio.
 
-5. Haga clic en **Revisar y crear**, y luego haga clic en **Crear**. 
+5. Haga clic en **Revisar y crear** y después en **Crear**. 
 
-# Tarea 2: Probar la aplicación web
+# <a name="task-2-test-the-web-app"></a>Tarea 2: Prueba de la aplicación web
 
 En esta tarea probaremos la aplicación web.
 
@@ -51,16 +51,16 @@ En esta tarea probaremos la aplicación web.
 
 2. Desde **Notificaciones**, haga clic en **Ir al recurso**. 
 
-3. Localice la **URL** en la hoja **Información general**. Copie la URL al portapapeles.
+3. En este tutorial, crearemos una nueva aplicación web que ejecute un contenedor de Docker.
 
-    ![Captura de pantalla de la hoja de propiedades de la aplicación web. La URL está resaltada.](../images/0801.png)
+    ![El contenedor incluye un mensaje de bienvenida.](../images/0801.png)
 
-4. Pegue el URI en una nueva ventana del explorador y presione Entrar. Se mostrará el mensaje "¡Le damos la bienvenida a Azure Container Instances!".
+4. In a new browser window, paste the URl and press enter. The Welcome to Azure Container Instances! welcome message will be displayed.
 
-    ![Captura de pantalla de la página Le damos la bienvenida a Azure Container Instance.](../images/0802.png)
+    ![Captura de pantalla de la página Le damos la bienvenida a Azure Container Instance.](../images/0802.png)
 
-5. Vuelva a la hoja **Información general** de su aplicación web y desplácese hacia abajo. Verá varios gráficos que realizan un seguimiento de los datos entrantes y salientes y las solicitudes. Si repite el paso 4 unas cuantas veces, debería poder ver la telemetría correspondiente en estos gráficos. Esto incluye el número de solicitudes y el tiempo de respuesta promedio. 
+5. Azure App Service es en realidad una colección de cuatro servicios, los cuales están diseñados para hospedar y ejecutar aplicaciones web. 
 
-**Nota**: Para evitar costes adicionales, puede quitar este grupo de recursos. Busque grupos de recursos, haga clic en su grupo de recursos y, luego, haga clic en **Eliminar grupo de recursos**. Compruebe el nombre del grupo de recursos y luego haga clic en **Eliminar**. Supervise las **Notificaciones** para ver cómo se realiza la eliminación.
+Los cuatro servicios (Web Apps, Mobile Apps, API Apps y Logic Apps) parecen diferentes, pero, al final, todos funcionan de manera muy similar.
 
-¡Enhorabuena! Ha creado correctamente un Servicio de aplicaciones de Azure.
+Enhorabuena. Acaba de crear con éxito una aplicación de Azure App Service.

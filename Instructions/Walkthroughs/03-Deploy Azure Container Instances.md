@@ -1,44 +1,44 @@
 ---
 wts:
-    title: '03 - Implementación de Azure Container Instances (10 minutos)'
-    module: 'Módulo 2 - Servicios principales de Azure (Cargas de trabajo)'
+  title: "3: Implementar Azure\_Container\_Instances (10\_minutos)"
+  module: Module 02 - Core Azure Services (Workloads)
 ---
 
-# 03: Implementar Azure Container Instances (10 min)
+# <a name="03---deploy-azure-container-instances-10-min"></a>3: Implementar Azure Container Instances (10 minutos)
 
-En este tutorial crearemos, configuraremos e implementaremos un contenedor en Azure Portal mediante Azure Container Instances (ACI). El contenedor es una aplicación web Bienvenido a ACI que muestra una página HTML estática. 
+In this walkthrough we create, configure, and deploy a container by using Azure Container Instances (ACI) in the Azure Portal. The container is a Welcome to ACI web application that displays a static HTML page. 
 
-# Tarea 1: Creación de una instancia de contenedor 
+# <a name="task-1-create-a-container-instance"></a>Tarea 1: Creación de una instancia de contenedor 
 
-En esta tarea, crearemos una nueva instancia de contenedor para la aplicación web. 
+En esta tarea, se creará una instancia de contenedor para la aplicación web.  
 
 1. Inicie sesión en [Azure Portal](https://portal.azure.com).
 
-2. En la hoja **Todos los servicios**, busque y seleccione **Container instances** y luego haga clic en **+ Agregar, + Crear y + Nueva**. 
+2. Desde la hoja **Todos los servicios**, busque y seleccione **Container instances** y haga clic en **+ Agregar, + Crear, o + Nuevo**. 
 
-3. Proporcione los siguientes detalles básicos para la nueva instancia de contenedor (deje los valores predeterminados para todo lo demás): 
+3. Dé los siguientes detalles básicos para la nueva instancia de contenedor (deje los valores predeterminados para todo lo demás): 
 
-	| Configuración| Valor|
-	|----|----|
-	| Suscripción | ***Utilice la suscripción predeterminada suministrada*** |
-	| Grupo de recursos | **Crear un nuevo grupo de recursos** |
-	| Nombre del contenedor| **mycontainer**|
-	| Región | **(EE. UU.) Este de EE. UU.** |
-	| Fuente de imagen| **Docker Hub u otro registro**|
-	| Tipo de imagen| **Público**|
-	| Imagen| **mcr.microsoft.com/azuredocs/aci-helloworld**|
-	| Tipo de sistema operativo| **Linux** |
-	| Tamaño| ***Dejar en el valor predeterminado***|
+    | Configuración| Value|
+    |----|----|
+    | Subscription | ***Usar los valores predeterminados*** |
+    | Grupo de recursos | **Crear un grupo de recursos** |
+    | Nombre del contenedor| **mycontainer**|
+    | Region | **(EE. UU.) Este de EE. UU.** |
+    | Origen de la imagen| **Docker Hub u otro registro**|
+    | Tipo de imagen| **Public**|
+    | Imagen| **mcr.microsoft.com/azuredocs/aci-helloworld**|
+    | Tipo de SO| **Linux** |
+    | Size| ***Deje la opción predeterminada.***|
 
 
-4. Configure la pestaña Redes (reemplace **xxxx** con letras y dígitos de manera que el nombre sea único a nivel global). Deje el resto de la configuración con los valores predeterminados.
+4. Configure the Networking tab (replace <bpt id="p1">**</bpt>xxxxx<ept id="p1">**</ept> with letters and digits such that the name is globally unique). Leave all other settings at their default values.
 
-	| Configuración| Valor|
-	|--|--|
-	| Etiqueta de nombre DNS| **Micontenedordnsxxxxx** |
+    | Configuración| Value|
+    |--|--|
+    | Etiqueta de nombre DNS| **mycontainerdnsxxxxx** |
 
-	
-	**Nota**: Su contenedor será accesible públicamente en dns-name-label.region.azurecontainer.io. Si recibe el mensaje de error **Etiqueta de nombre DNS no disponible** después de la implementación, especifique una etiqueta de nombre DNS diferente (para ello, reemplace xxxxx) y vuelva a realizar la implementación. 
+    
+    <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Your container will be publicly reachable at dns-name-label.region.azurecontainer.io. If you receive a <bpt id="p1">**</bpt>DNS name label not available<ept id="p1">**</ept> error message following the deployment, specify a different DNS name label (replacing the xxxxx) and re-deploy. 
 
 5. Haga clic en **Revisar y crear** para iniciar el proceso de validación automática.
 
@@ -47,9 +47,9 @@ En esta tarea, crearemos una nueva instancia de contenedor para la aplicación w
 7. Supervise la página de implementación y la de **Notificaciones**. 
 
 
-# Tarea 2: Compruebe la implementación de la instancia del contenedor
+# <a name="task-2-verify-deployment-of-the-container-instance"></a>Tarea 2: Comprobación de la implementación de la instancia de contenedor
 
-En esta tarea, comprobamos que la instancia del contenedor se está ejecutando asegurándonos de que se muestre la página principal.
+En esta tarea, se comprobará que la instancia del contenedor está en ejecución, asegurándose de que se muestre la página principal.
 
 1. Una vez completada la implementación, haga clic en el vínculo **Ir al recurso** en la hoja de implementación o el vínculo al recurso en el área de notificación.
 
@@ -57,13 +57,13 @@ En esta tarea, comprobamos que la instancia del contenedor se está ejecutando a
 
 3. Localice el nombre de dominio completo (FQDN).
 
-	![Captura de pantalla del panel de información general para el contenedor recién creado en Azure Portal, con el FQDN resaltado. ](../images/0202.png)
+    ![Captura de pantalla del panel de información general para el contenedor recién creado en Azure Portal, con el FQDN resaltado. ](../images/0202.png)
 
-2. Copie el FQDN del contenedor en una nueva pestaña del explorador web y presione **Entrar**. La página principal debería aparecer. 
+2. En este tutorial crearemos, configuramos e implementamos un contenedor mediante Azure Container Instances (ACI) en Azure Portal. 
 
-	![Captura de pantalla del mensaje de bienvenida de ACI que se muestra en un explorador web.](../images/0203.png)
+    ![Captura de pantalla del mensaje de bienvenida de ACI que se muestra en un explorador web.](../images/0203.png)
 
 
-**¡Enhorabuena!** Ha utilizado Azure Portal para implementar correctamente una aplicación en un contenedor de Azure Container Instances.
+El contenedor es una aplicación web Bienvenido a ACI que muestra una página HTML estática.
 
-**Nota**: Para evitar costes adicionales, puede quitar este grupo de recursos. Busque grupos de recursos, haga clic en su grupo de recursos y, luego, haga clic en **Eliminar grupo de recursos**. Compruebe el nombre del grupo de recursos y luego haga clic en **Eliminar**. Supervise las **Notificaciones** para ver cómo se realiza la eliminación.
+<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click <bpt id="p1">**</bpt>Delete resource group<ept id="p1">**</ept>. Verify the name of the resource group and then click <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept>. Monitor the <bpt id="p1">**</bpt>Notifications<ept id="p1">**</ept> to see how the delete is proceeding.
