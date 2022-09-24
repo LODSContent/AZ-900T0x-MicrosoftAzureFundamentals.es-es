@@ -2,16 +2,11 @@
 title: Instrucciones hospedadas en línea
 permalink: index.html
 layout: home
-ms.openlocfilehash: c8816b7d9de9c19fbd4c6b3f373d6e4336c6ca5a
-ms.sourcegitcommit: 26c283fffdd08057fdce65fa29de218fff21c7d0
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 01/27/2022
-ms.locfileid: "137908668"
 ---
+
 # <a name="content-directory"></a>Directorio de contenido
 
-Hipervínculos a cada uno de los tutoriales. Los instructores pueden optar por usar el tutorial como una demostración o un laboratorio de alumnos. 
+Hyperlinks to each of the walkthroughs. Instructors may choose to use the walkthrough as a demonstration or a student lab. 
 
 ## <a name="walkthroughs"></a>Tutoriales
 

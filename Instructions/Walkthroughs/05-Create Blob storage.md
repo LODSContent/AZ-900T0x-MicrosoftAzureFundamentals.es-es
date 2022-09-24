@@ -17,7 +17,7 @@ En esta tarea crearemos una nueva cuenta de almacenamiento.
 
 3. On the <bpt id="p1">**</bpt>Basics<ept id="p1">**</ept> tab of the <bpt id="p2">**</bpt>Create storage account<ept id="p2">**</ept> blade, fill in the following information (replace <bpt id="p3">**</bpt>xxxx<ept id="p3">**</ept> in the name of the storage account with letters and digits such that the name is globally unique). Leave the defaults for everything else.
 
-    | Configuración | Valor | 
+    | Configuración | Value | 
     | --- | --- |
     | Subscription | **Deje el valor predeterminado** |
     | Grupo de recursos | **Crear un grupo de recursos** |

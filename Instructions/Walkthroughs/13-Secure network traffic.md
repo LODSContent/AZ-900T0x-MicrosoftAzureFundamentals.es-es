@@ -61,7 +61,7 @@ En esta tarea, crearemos un grupo de seguridad de red y lo asociaremos con la in
 
 2. En la pestaña **Datos básicos** de la hoja **Crear grupo de seguridad de red**, especifique la siguiente configuración.
 
-    | Configuración | Value |
+    | Configuración | Valor |
     | -- | -- |
     | Subscription | **Utilizar la suscripción predeterminada** |
     | Grupo de recursos | **Seleccionar el predeterminado en el menú desplegable** |

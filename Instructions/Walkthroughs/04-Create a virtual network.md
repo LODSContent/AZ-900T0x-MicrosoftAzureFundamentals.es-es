@@ -38,7 +38,7 @@ En esta tarea crearemos dos máquinas virtuales en la red virtual.
 
 2. En la pestaña **Datos básicos**, complete la siguiente información (deje los valores predeterminados para todo lo demás):
 
-   | Configuración | Valor | 
+   | Configuración | Value | 
    | --- | --- |
    | Subscription | **Usar los valores predeterminados** |
    | Grupo de recursos |  **Seleccionar el predeterminado en el menú desplegable** |
