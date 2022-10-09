@@ -8,7 +8,7 @@ wts:
 
 En este tutorial usará la calculadora del coste total de propiedad (TCO) para generar un informe de comparación de costes para un ambiente local.
 
-<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: This walkthrough provides example definitions of on-premises infrastructure and workloads for a typical datacenter. To create a TCO Calculator report, use the example definitions or provide details of your <bpt id="p1">*</bpt>actual<ept id="p1">*</ept> on-premises infrastructure and workloads.
+**Nota**: En este tutorial, se proporcionan definiciones de ejemplo de la infraestructura local y las cargas de trabajo para un centro de datos típico. Para crear un informe de la Calculadora de TCO, use las definiciones de ejemplo o proporcione detalles de su infraestructura local y sus cargas de trabajo *reales*.
 
 # <a name="task-1-configure-the-tco-calculator"></a>Tarea 1: Configurar la calculadora de TCO
 
@@ -54,7 +54,7 @@ En esta tarea agregaremos información de infraestructura a la calculadora.
     | Tipo de almacenamiento | **Disco local/SAN** |
     | Tipo de disco | **HDD** |
     | Capacity | **60 TB** |  
-    | Backup | **120 TB** |
+    | Copia de seguridad | **120 TB** |
     | Archivar | **0 TB** |
 
 5. En el panel **Redes**, agregue el ancho de banda. 
@@ -88,6 +88,6 @@ En esta tarea revisaremos las recomendaciones de ahorro de costes y descargaremo
 
 3. Para guardar o imprimir una copia en PDF del informe, haga clic en **Descargar**.
 
-    ![Screenshot of the report pane of the tco calculator in Azure. The highlighted and completed input fields indicates how set the tco calculator timeframe to three years and the region to north europe. A graph shows the cost of on-premises infrastructure and workloads off-set against the reduced cost of using Azure.](../images/2001.png)
+    ![Captura de pantalla del panel de informes de la calculadora de TCO en Azure. Los campos de entrada resaltados y completados indican cómo establecer el período de la calculadora de TCO en tres años y la región en el Norte de Europa. Un gráfico muestra el coste de la infraestructura local y las cargas de trabajo compensadas frente al coste reducido de usar Azure.](../images/2001.png)
 
-Congratulations! You have used the TCO Calculator to generate a cost comparison report for an on-premises environment.
+¡Enhorabuena! Ha utilizado la Calculadora de TCO para generar un informe de comparación de costes para un entorno local.

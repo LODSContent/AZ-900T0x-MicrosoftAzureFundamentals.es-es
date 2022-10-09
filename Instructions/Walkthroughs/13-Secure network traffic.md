@@ -43,15 +43,15 @@ En esta tarea, crearemos una máquina virtual de Windows Server 2019 Datacenter.
 
 6. Deje los valores predeterminados restantes y luego haga clic en el botón **Revisar y crear** en la parte inferior de la página.
 
-7. Once Validation is passed click the <bpt id="p1">**</bpt>Create<ept id="p1">**</ept> button. It can take about five minutes to deploy the virtual machine.
+7. Una vez que supere la validación, haga clic en el botón **Crear**. La implementación de la máquina virtual puede tardar unos cinco minutos.
 
-8. Monitor the deployment. It may take a few minutes for the resource group and virtual machine to be created. 
+8. Supervise la implementación. La creación del grupo de recursos y la máquina virtual puede tomar varios minutos. 
 
 9. Desde la hoja de implementación o desde el área Notificación, haga clic en **Ir al recurso**. 
 
 10. Sobre la hoja de la máquina virtual **SimpleWinVM**, haga clic en **Redes**, revise la pestaña de **Reglas de puerto de entrada** y tenga en cuenta que no hay un grupo de seguridad de red asociado con la interfaz de red de la máquina virtual o la subred a la que está conectada la interfaz de red.
 
-    <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Identify the name of the network interface. You will need it in the next task.
+    **Nota**: Identifique el nombre de la interfaz de red. Lo necesitará en la próxima tarea.
 
 # <a name="task-2-create-a-network-security-group"></a>Tarea 2: Creación de un grupo de seguridad de red
 
@@ -84,16 +84,16 @@ En esta tarea, permitiremos el tráfico RDP a la máquina virtual mediante la co
 
 2. Sobre el panel de **Visión general**, haga clic en **Conectar**.
 
-3. Attempt to connect to the virtual machine by selecting RDP and downloading an running the RDP file. By default the network security group does not allow RDP. Close the error window. 
+3. Intente conectarse a la máquina virtual. Para ello, seleccione RDP y descargue el archivo RDP en ejecución. Por defecto, el grupo de seguridad de red no permite RDP. Cierre la ventana de error. 
 
 
     ![Captura de pantalla del mensaje de error de que la conexión de la máquina virtual ha fallado.](../images/1201.png)
 
 4. En la hoja de la máquina virtual, desplácese hacia abajo hasta la sección **Configuración**, haga clic en **Redes** y observe que las reglas de entrada del el grupo de seguridad de red **miNSGSeguro (conectado a la interfaz de red: miVMNic)** deniegan todo el tráfico entrante, excepto el tráfico dentro de la red virtual y los sondeos del equilibrador de carga.
 
-5. On the <bpt id="p1">**</bpt>Inbound port rules<ept id="p1">**</ept> tab, click <bpt id="p2">**</bpt>Add inbound port rule<ept id="p2">**</ept> . Click <bpt id="p1">**</bpt>Add<ept id="p1">**</ept> when you are done. 
+5. Sobre la pestaña **Reglas de puerto de entrada**, haga clic en **Agregar regla de puerto de entrada** . Haga clic en **Agregar** cuando haya acabado. 
 
-    | Configuración | Value |
+    | Configuración | Valor |
     | -- | -- |
     | Source | **Cualquiera**|
     | Source port ranges | **\*** |
@@ -104,7 +104,7 @@ En esta tarea, permitiremos el tráfico RDP a la máquina virtual mediante la co
     | Priority | **300** |
     | Name | **AllowRDP** |
 
-6. Select <bpt id="p1">**</bpt>Add<ept id="p1">**</ept> and wait for the rule to be provisioned and then try again to RDP into the virtual machine by going back to <bpt id="p2">**</bpt>Connect<ept id="p2">**</ept> This time you should be successful. Remember the user is <bpt id="p1">**</bpt>azureuser<ept id="p1">**</ept> and the password is <bpt id="p2">**</bpt>Pa$$w0rd1234<ept id="p2">**</ept>.
+6. Seleccione **Agregar**, espere a que la regla se aprovisione y luego vuelva a intentar conectarse a la máquina virtual mediante RDP. Para ello, vuelva a **Conectar**. Este vez debería poder hacerlo. Recuerde que el usuario es **azureuser** y la contraseña es **Pa$$w0rd1234**.
 
 # <a name="task-4-configure-an-outbound-security-port-rule-to-deny-internet-access"></a>Tarea 4: Configurar una regla de puerto de seguridad saliente para denegar el acceso a Internet
 
@@ -114,7 +114,7 @@ En esta tarea, crearemos una regla de puerto saliente NSG que denegará el acces
 
 2. Después de que la máquina arranque, abra el explorador de **Internet Explorer**. 
 
-3. Verify that you can access <bpt id="p1">**</bpt><ph id="ph1">https://www.bing.com</ph><ept id="p1">**</ept> and then close Internet Explorer. You will need to work through the IE enhanced security pop-ups. 
+3. Compruebe que puede acceder **https://www.bing.com** y luego cierre Internet Explorer. Deberá trabajar a través de las ventanas emergentes de seguridad mejorada de IE. 
 
     **Nota**: Ahora configuraremos una regla para denegar el acceso saliente a Internet. 
 
@@ -122,9 +122,9 @@ En esta tarea, crearemos una regla de puerto saliente NSG que denegará el acces
 
 5. En **Configuración**, haga clic en **Redes** y después en **Reglas de puerto de salida**.
 
-6. Notice there is a rule, <bpt id="p1">**</bpt>AllowInternetOutbound<ept id="p1">**</ept>. This a default rule and cannot be removed. 
+6. Verá que hay una regla, **AllowInternetOutbound**. Esta es una regla predeterminada y no se puede eliminar. 
 
-7. Click <bpt id="p1">**</bpt>Add outbound port rule<ept id="p1">**</ept> to the right of the <bpt id="p2">**</bpt>myNSGSecure  (attached to network interface: myVMNic)<ept id="p2">**</ept> network security group and configure a new outbound security rule with a higher priority that will deny internet traffic. Click <bpt id="p1">**</bpt>Add<ept id="p1">**</ept> when you are finished. 
+7. Haga clic en **Agregar regla de puerto de salida**, a la derecha del grupo de seguridad de red **myNSGSecure (conectado a la interfaz de red: myVMNic)** y configure una nueva regla de seguridad saliente con una prioridad más alta que denegará el tráfico de Internet. Haga clic en **Agregar** cuando haya acabado. 
 
     | Configuración | Valor |
     | -- | -- |
@@ -140,6 +140,6 @@ En esta tarea, crearemos una regla de puerto saliente NSG que denegará el acces
 
 8. Haga clic en **Agregar**. Configure de nuevo el RDP en la VM. 
 
-9. Browse to <bpt id="p1">**</bpt><ph id="ph1">https://www.microsoft.com</ph><ept id="p1">**</ept>. The page should not display. You may need to work through additional IE enhanced security pop-ups.  
+9. Vaya a **https://www.microsoft.com** . La página no debería mostrarse. Es posible que deba trabajar a través de ventanas emergentes de seguridad mejoradas de IE adicionales.  
 
-<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click <bpt id="p1">**</bpt>Delete resource group<ept id="p1">**</ept>. Verify the name of the resource group and then click <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept>. Monitor the <bpt id="p1">**</bpt>Notifications<ept id="p1">**</ept> to see how the delete is proceeding.
+**Nota**: Para evitar costes adicionales, opcionalmente, puede quitar este grupo de recursos. Busque grupos de recursos, haga clic en su grupo de recursos y, luego, haga clic en **Eliminar grupo de recursos**. Compruebe el nombre del grupo de recursos y luego haga clic en **Eliminar**. Supervise las **Notificaciones** para ver cómo se realiza la eliminación.

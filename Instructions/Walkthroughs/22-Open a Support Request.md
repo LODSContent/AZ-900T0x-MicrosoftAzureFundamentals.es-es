@@ -13,9 +13,9 @@ En este tutorial veremos las opciones de planes de soporte disponibles y luego p
 
 2. Desde la hoja **Todos los servicios**, busque y seleccione **Ayuda y soporte técnico**, después, seleccione **Planes de soporte**.
 
-3. Take a few minutes to review the different support plans. Notice what is included in the <bpt id="p1">**</bpt>Basic<ept id="p1">**</ept> plan. 
+3. Tómese unos minutos para revisar los diferentes planes de soporte técnico. Tenga en cuenta lo que se incluye en el plan **Básico**. 
 
-4. Click <bpt id="p1">**</bpt>+ New support request<ept id="p1">**</ept>. The ticket is created based on the values you specify. 
+4. Haga clic en **Nueva solicitud de soporte técnico**. El vale se crea en función de los valores que especifique. 
 
     | Configuración | Value|
     |----|--------|
@@ -29,9 +29,9 @@ En este tutorial veremos las opciones de planes de soporte disponibles y luego p
 
 5. Haga clic en **Siguiente: Soluciones >>** y lea las soluciones recomendadas.
 
-6. Click <bpt id="p1">**</bpt>Next: Details &gt;&gt;<ept id="p1">**</ept>. When submitting an actual support request, you would provide as much information as possible to allow for a speedy resolution of the issue. Your contact choices on this page depend on your support plan. 
+6. Haga clic en **Siguiente: Detalles >>** . Al enviar una solicitud de soporte técnico real, debe proporcionar tanta información como sea posible para permitir una resolución rápida del problema. Sus opciones de contacto en esta página dependen de su plan de soporte. 
 
-    <bpt id="p1">**</bpt>Note:<ept id="p1">**</ept> We will stop at this point. Do you understand how to submit a technical request?
+    **Nota:** Nos detendremos en este punto. ¿Entiende cómo enviar una solicitud técnica?
 
 # <a name="task-2-create-a-billing-support-request"></a>Tarea 2: Crear una solicitud de soporte técnico de facturación
 
@@ -47,12 +47,12 @@ En este tutorial veremos las opciones de planes de soporte disponibles y luego p
 
 2. Haga clic en **Siguiente: Soluciones** y lea las soluciones recomendadas.
 
-3. Click <bpt id="p1">**</bpt>Next: Details<ept id="p1">**</ept>.  When submitting a real support request you would provide as much information as possible to allow for a speedy resolution of the issue. 
+3. Haga clic en **Siguiente: Detalles**.  Al enviar una solicitud de soporte técnico real, debe proporcionar tanta información como sea posible para permitir una resolución rápida del problema. 
 
-    <bpt id="p1">**</bpt>Note:<ept id="p1">**</ept> We will STOP at this point. Do you understand how to submit a support request?
+    **Nota:** Nos detendremos en este punto. ¿Entiende cómo enviar una solicitud de soporte técnico?
 
-4. Click <bpt id="p1">**</bpt>All support requests<ept id="p1">**</ept>. This is where your support requests are shown. An email is also sent to your email address containing details of the support request.
+4. Haga clic en **Todas las solicitudes de soporte técnico**. Aquí es donde se muestran sus solicitudes de soporte técnico. También se envía un correo electrónico a su dirección de correo electrónico con detalles de la solicitud de soporte técnico.
 
-Tómese unos minutos para revisar los diferentes planes de soporte técnico.
+¡Enhorabuena! Ha visto las opciones de plan de soporte disponibles y ha practicado la creación y la supervisión de una nueva solicitud de soporte técnico.
 
 **Nota**: Haga clic para obtener más información sobre la [**creación de un vale de soporte de Azure**](https://azure.microsoft.com/en-us/support/create-ticket).

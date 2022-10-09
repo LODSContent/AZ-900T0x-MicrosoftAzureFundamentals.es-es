@@ -19,16 +19,16 @@ En esta tarea, configuraremos la directiva **Requerir una etiqueta en los recurs
 
 4. Tenga en cuenta que el **Ámbito** para nuestra directiva será toda la suscripción. 
 
-5. Under <bpt id="p1">**</bpt>Basics<ept id="p1">**</ept> Select the <bpt id="p2">**</bpt>Policy definition<ept id="p2">**</ept> ellipsis button (right side of textbox). In the <bpt id="p1">**</bpt>Search<ept id="p1">**</ept> box, enter the value <bpt id="p2">**</bpt>tag<ept id="p2">**</ept>. A list of related Policies with the word <bpt id="p1">**</bpt>tag<ept id="p1">**</ept> will appear. Scroll down till you find the <bpt id="p1">**</bpt>Require a tag and its value on resources<ept id="p1">**</ept> definition, click on it and click <bpt id="p2">**</bpt>Select<ept id="p2">**</ept>.
+5. Bajo **Datos básicos**, seleccione el botón de puntos suspensivos **Definición de directiva** (al lado derecho del cuadro de texto). En el cuadro **Buscar**, escriba el valor **etiqueta**. Aparecerá una lista de directivas relacionadas con la palabra **etiqueta**. Desplácese hacia abajo hasta que encuentre la definición **Requerir una etiqueta y su valor en los recursos**, haga clic en ella y, a continuación, en **Seleccionar**.
 
    ![imagen](https://user-images.githubusercontent.com/89808319/155607579-d564a43e-a9cd-443d-8482-f47879eff2e9.png)
    
-6.  On the <bpt id="p1">**</bpt>Parameters<ept id="p1">**</ept> tab, type in **Company : Contoso ** for the tag key/value pair name. Click <bpt id="p1">**</bpt>Review + create<ept id="p1">**</ept>, and then <bpt id="p2">**</bpt>Create<ept id="p2">**</ept>.
+6.  En la pestaña **Parámetros**, escriba **Company : Contoso ** como nombre del par clave-valor de etiqueta. Haga clic en **Revisar y crear** y, luego, en **Crear**.
 
   
 
-7. The <bpt id="p1">**</bpt>Require a tag amd its value on resources<ept id="p1">**</ept> policy assignment is now in place. When a resource is created, it must include a tag with the Company : Contoso key.
-   <bpt id="p1">**</bpt>Note - you need to wait up to 30 minutes for the Policy to be applied.<ept id="p1">**</ept> 
+7. La asignación de la directiva **Requerir una etiqueta y su valor en los recursos** ya está implementada. Cuando se crea un recurso, tiene que incluir una etiqueta con la clave Company : Contoso.
+   **Nota: Tiene que esperar hasta 30 minutos para que se aplique la directiva.** 
 
   ![imagen](https://user-images.githubusercontent.com/89808319/155607357-556646b6-9ca7-4817-a02e-643869b2c4dd.png)
 
@@ -38,45 +38,45 @@ En esta tarea crearemos cuentas de almacenamiento para probar el etiquetado requ
 
 1. En Azure Portal, desde la hoja **Todos los servicios**, busque y seleccione **Cuentas de almacenamiento** y luego haga clic en **+ Agregar, + Crear, o + Nuevo**.
 
-2. On the <bpt id="p1">**</bpt>Basics<ept id="p1">**</ept> tab of the <bpt id="p2">**</bpt>Create storage account<ept id="p2">**</ept> blade, fill in the following information (replace <bpt id="p3">**</bpt>xxxx<ept id="p3">**</ept> in the name of the storage account with letters and digits such that the name is globally unique). Leave the defaults for everything else.
+2. En la pestaña **Datos básicos** de la hoja **Crear cuenta de almacenamiento**, complete la siguiente información (reemplace **xxxx** en el nombre de la cuenta de almacenamiento con letras y dígitos de modo que el nombre sea único a nivel global). Deje los valores predeterminados para todo lo demás.
 
     | Configuración | Valor | 
     | --- | --- |
-    | Subscription | **Uso de los valores predeterminados** |
+    | Suscripción | **Uso de los valores predeterminados** |
     | Resource group | **Crear un grupo de recursos** |
     | Nombre de la cuenta de almacenamiento | **storageaccountxxxx** |
     | Location | **(EE. UU.) Este de EE. UU.** |
 
 3. Haga clic en **Revisar y crear**. 
 
-    <bpt id="p1">**</bpt>Note:<ept id="p1">**</ept> We are testing to see what happens when the tag is not supplied. Please note, it can take up to 30 minutes for Policies to take effect.
+    **Nota:** Estamos probando para ver qué sucede cuando no se suministra la etiqueta. Tenga en cuenta que las directivas pueden tardar hasta 30 minutos en surtir efecto.
 
-4. You will receive a Validation failed message. Click the <bpt id="p1">**</bpt>Click here to view details<ept id="p1">**</ept> message. On the <bpt id="p1">**</bpt>Errors<ept id="p1">**</ept> blade, on the <bpt id="p2">**</bpt>Summary<ept id="p2">**</ept> tab note the error message stating that resource was disallowed by Policy.
+4. Recibirá un mensaje de error de validación. Haga clic en el mensaje **Haga clic aquí para ver los detalles**. En la hoja **Errores**, en la pestaña **Resumen**, observe el mensaje de error que indica que la directiva no permite el recurso.
 
     **Nota:** Si ve la pestaña Error sin procesar, verá el nombre de etiqueta específico que se necesita. 
 
     ![Captura de pantalla de rechazado debido a un error de directiva.](../images/1704.png)
 
 
-5. Close the <bpt id="p1">**</bpt>Error<ept id="p1">**</ept> pane and click <bpt id="p2">**</bpt>Previous<ept id="p2">**</ept> (bottom of the screen). Provide the tagging information. 
+5. Cierre el panel de **Error** y haga clic en **Anterior** (parte inferior de la pantalla). Proporcione la información de etiquetado. 
 
     | Configuración | Value | 
     | --- | --- |
     | Nombre de etiqueta | **Company:Contoso** (puede no estar en la lista desplegable) |
 
-6. Click <bpt id="p1">**</bpt>Review + create<ept id="p1">**</ept> and verify that the validation was successful. Click <bpt id="p1">**</bpt>Create<ept id="p1">**</ept> to deploy the storage account. 
+6. Haga clic en **Revisar y crear** y compruebe que la validación haya sido exitosa. Haga clic en **Crear** para implementar la cuenta de almacenamiento. 
 
 # <a name="task-3-view-all-resources-with-a-specific-tag"></a>Tarea 3: Vea todos los recursos con una etiqueta específica
 
 1. En Azure Portal, desde la hoja **Todos los servicios**, busque y seleccione **Etiquetas**.
 
-2. Note all tags and their values. Click the <bpt id="p1">**</bpt>Company : Contoso<ept id="p1">**</ept> key/value pair. This will display a blade showing the newly created storage account, as long as you included the tag during its deployment. 
+2. Tenga en cuenta todas las etiquetas y sus valores. Haga clic en el par clave-valor **Company : Contoso**. Esto mostrará una hoja que muestra la cuenta de almacenamiento recién creada, siempre que haya incluido la etiqueta durante su implementación. 
 
    ![Captura de pantalla de las etiquetas con compañía y contoso seleccionados.](../images/1705.png)
 
 3. En el Portal, muestre la hoja **Todos los recursos**.
 
-4. Click <bpt id="p1">**</bpt>Add filter<ept id="p1">**</ept> and add the <bpt id="p2">**</bpt>Company<ept id="p2">**</ept> tag key as the filter category. With the filter applied, only your storage account will be listed.
+4. Haga clic en **Agregar filtro** y agregue la clave de etiqueta de la **Compañía** como la categoría de filtro. Con el filtro aplicado, solo se mostrará su cuenta de almacenamiento.
 
     ![Captura de pantalla del filtro Todos los recursos con la compañía seleccionada.](../images/1706.png)
 
@@ -94,7 +94,7 @@ En esta tarea eliminaremos la directiva **Requerir una etiqueta en los recursos*
 
 5. Si tiene tiempo, cree otro recurso sin una etiqueta para asegurarse de que la directiva ya no está vigente.
 
-Bajo **Datos básicos**, seleccione el botón de puntos suspensivos **Definición de directiva** (al lado derecho del cuadro de texto).
+Felicidades. En este tutorial creamos una asignación de directiva que requería etiquetado, creamos un recurso (cuenta de almacenamiento) y probamos la directiva para el etiquetado, vimos recursos con una etiqueta específica y eliminamos la directiva de etiquetado.
 
 
-En el cuadro **Buscar**, escriba el valor **etiqueta**.
+**Nota**: Para evitar costes adicionales, opcionalmente, puede quitar este grupo de recursos. Busque grupos de recursos, haga clic en su grupo de recursos y, luego, haga clic en **Eliminar grupo de recursos**. Compruebe el nombre del grupo de recursos y luego haga clic en **Eliminar**. Supervise las **Notificaciones** para ver cómo se realiza la eliminación.

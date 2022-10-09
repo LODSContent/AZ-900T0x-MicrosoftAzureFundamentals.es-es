@@ -7,7 +7,7 @@ wts:
 
 En este tutorial determinaremos el acuerdo de nivel de servicio de los servicios de Azure disponible y luego calcularemos la disponibilidad basada en el acuerdo de nivel de servicio compuesto de la aplicación esperada.
 
-Our example application consists of these Azure services. We will not go in to deep architectural configuration and considerations, the intention here is to give an high level example.
+Nuestra aplicación de ejemplo consta de estos servicios de Azure. No entraremos en configuraciones ni consideraciones arquitectónicas en detalle. La intención aquí es dar un ejemplo de alto nivel.
 
 + **App Service**: Para hospedar la aplicación.
 + **Azure AD B2C**: Para autenticar inicios de sesión de usuarios y administrar perfiles.
@@ -18,19 +18,19 @@ Our example application consists of these Azure services. We will not go in to d
 
 1. En un explorador, vaya a la página [Resumen de SLA para los servicios de Azure](https://azure.microsoft.com/en-us/support/legal/sla/summary/).
 
-2. Locate the <bpt id="p1">**</bpt>App Service<ept id="p1">**</ept> SLA uptime value, <bpt id="p2">**</bpt>99.95%<ept id="p2">**</ept>. Click <bpt id="p1">**</bpt>View full details<ept id="p1">**</ept>, and then expand <bpt id="p2">**</bpt>SLA details<ept id="p2">**</ept>. Notice the <bpt id="p1">**</bpt>Monthly uptime percentages<ept id="p1">**</ept> and <bpt id="p2">**</bpt>Service Credits<ept id="p2">**</ept>.
+2. Localice el valor de tiempo de actividad del contrato de nivel de servicio de **App Service**, **99,95 %** . Haga clic en **Ver detalles completos** y luego expanda los **detalles del SLA**. Observe los **Porcentajes mensuales del tiempo de actividad** y los **Créditos de servicio**.
 
 3. Regrese a la página web del contrato de nivel de servicio, localice el servicio **Azure Active Directory B2C** y determine el valor de tiempo de actividad del acuerdo (SLA), **99,9 %** . 
 
 4. Localice el valor de tiempo de actividad del contrato de nivel de servicio de **Application Gateway**, **99,95 %** . 
 
-5. The Azure SQL database uses Premium tiers but is not configured for Zone Redundant Deployments. Locate the <bpt id="p1">**</bpt>Azure SQL Database<ept id="p1">**</ept> SLA uptime value, <bpt id="p2">**</bpt>99.99%<ept id="p2">**</ept>. 
+5. La base de datos de Azure SQL usa niveles premium, pero no está configurada para implementaciones con redundancia de zona. Localice el valor de tiempo de actividad del SLA de **Azure SQL Database**, **99,99%** . 
 
-    <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: There are different uptime values for different configurations and deployments of Azure SQL Database. It is important you are clear on your required uptime values, when planning and costing your deployment and configuration. Small changes in uptime can have impact on service costs as well as potentially increase complexity in configuration. Some other services that may be of interest on the Azure SLA summary web page would include <bpt id="p1">**</bpt>Virtual Machines<ept id="p1">**</ept>, <bpt id="p2">**</bpt>Storage Accounts<ept id="p2">**</ept> and <bpt id="p3">**</bpt>Cosmos DB<ept id="p3">**</ept>.
+    **Nota**: Existen diferentes valores de tiempo de actividad para diferentes configuraciones e implementaciones de Azure SQL Database. Es importante que tenga claros los valores de tiempo de actividad requeridos al planificar y calcular el coste de su implementación y configuración. Pequeños cambios en el tiempo de actividad pueden tener un impacto en los costes del servicio, así como aumentar potencialmente la complejidad en la configuración. Otros servicios que pueden ser de interés en la página web de resumen del contrato de nivel de servicio de Azure incluirían las **Maquinas virtuales**, **Cuentas de almacenamiento** y **Cosmos DB**.
 
 # <a name="task-2-calculate-the-application-composite-sla-percentage-uptime"></a>Tarea 2: Calcular el tiempo de actividad del porcentaje del contrato de nivel de servicio compuesto de la aplicación
 
-1. Nuestra aplicación de ejemplo consta de estos servicios de Azure.
+1. Si alguno de los servicios que comprende nuestra aplicación no está disponible, tampoco lo estará la aplicación para que los usuarios inicien sesión y la usen. Como tal, el tiempo de actividad total para nuestra aplicación consiste en lo siguiente:
 
     **% de tiempo de actividad de App Service** X **% de tiempo de actividad de Azure AD B2C** X **% de tiempo de actividad de Azure Application Gateway** X **% de tiempo de actividad de Azure SQL Database** =  **% de tiempo de actividad total**.
 
@@ -40,4 +40,4 @@ Our example application consists of these Azure services. We will not go in to d
 
     Esta es la disponibilidad esperada basada en el contrato de nivel de servicio (SLA) de nuestra aplicación con los servicios y la arquitectura actuales.
 
-No entraremos en configuraciones ni consideraciones arquitectónicas en detalle. La intención aquí es dar un ejemplo de alto nivel.
+¡Enhorabuena! Ha determinado el tiempo de actividad basado en el contrato de nivel de servicio (SLA) para cada uno de los servicios en nuestra aplicación de muestra y luego ha calculado la disponibilidad esperada compuesta basada en el contrato de nivel de servicio para la aplicación.

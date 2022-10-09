@@ -11,21 +11,21 @@ En este tutorial implementaremos una máquina virtual con una plantilla de inici
 
 En esta tarea, examinaremos la galería de inicio rápido de Azure e implementaremos una plantilla que crea una máquina virtual. 
 
-1. Within the lab environment, open a new browser window, and enter T <ph id="ph1">https://azure.microsoft.com/en-us/resources/templates/?azure-portal=true</ph>. In the gallery you will find a number of popular and recently updated templates. These templates automate deployment of Azure resources, including installation of popular software packages. Browse through the many different types of templates that are available.
+1. En el entorno de laboratorio, abra una nueva ventana del explorador e introduzca T https://azure.microsoft.com/en-us/resources/templates/?azure-portal=true. En la galería encontrará una serie de plantillas populares y recientemente actualizadas. Estas plantillas automatizan la implementación de los recursos de Azure, incluida la instalación de paquetes de software populares. Explore los diferentes tipos de plantillas disponibles.
 
 3. Seleccione **Implementar una VM de Windows sencilla**.
 
-4. Click the <bpt id="p1">**</bpt>Deploy to Azure<ept id="p1">**</ept> button. Your browser session will be automatically redirected to the <bpt id="p1">[</bpt>Azure portal<ept id="p1">](http://portal.azure.com/)</ept>.
+4. Haga clic en botón **Deploy to Azure** (Implementar en Azure). Su sesión del explorador se redirigirá automáticamente a [Azure Portal](http://portal.azure.com/).
 
-  <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: The <bpt id="p2">**</bpt>Deploy to Azure<ept id="p2">**</ept> button enables you to deploy the template via the Azure portal. During such deployment, you will be prompted only for small set of configuration parameters. 
+  **Nota**: El botón **Implementar en Azure** le permite implementar la plantilla a través de Azure Portal. Durante dicha implementación, se le pedirá confirmación solo de un pequeño conjunto de parámetros de configuración. 
 
 5. Cuando se le solicite, inicie sesión en su suscripción de Azure con las credenciales proporcionadas anteriormente en las instrucciones.
 
-6. Click <bpt id="p1">**</bpt>Edit template<ept id="p1">**</ept>. The Resource Manager template format uses the JSON format. Review the parameters and variables.  Then locate the parameter for virtual machine name. Change the name to <bpt id="p1">**</bpt>myVMTemplate<ept id="p1">**</ept>. <bpt id="p1">**</bpt>Save<ept id="p1">**</ept> your changes. 
+6. Haga clic en **Editar plantilla**. El formato de la plantilla Administrador de recursos usa el formato JSON. Revise los parámetros y variables.  A continuación, busque el parámetro para el nombre de la máquina virtual. Cambie el nombre a **myVMTemplate**. Guarde los cambios mediante **Guardar**. 
 
     ![Captura de pantalla de la plantilla con el cambio de nombre de VM resaltado.](../images/0901.png)
 
-7. Now configure the parameters required by the template (replace <bpt id="p1">***</bpt>xxxx<ept id="p1">***</ept> in the DNS label prefix with letters and digits such that the label is globally unique). Leave the defaults for everything else. 
+7. Ahora configure los parámetros requeridos por la plantilla (reemplace ***xxxx*** del prefijo de la etiqueta DNS con letras y dígitos de modo que la etiqueta sea globalmente única). Deje los valores predeterminados para todo lo demás. 
 
     | Configuración| Valor|
     |----|----|
@@ -50,7 +50,7 @@ En esta tarea, comprobaremos que la máquina virtual se implementó correctament
 
 2. Asegúrese de que se haya creado su nueva máquina virtual. 
 
-    ![Screenshot of the virtual machines page. The new VM is shown and running.](../images/0902.png)
+    ![Captura de pantalla de la página de máquinas virtuales. Se muestra y se ejecuta la nueva VM.](../images/0902.png)
 
 3. Seleccione su máquina virtual y, en el panel **Información general**, seleccione la pestaña **Supervisión** y desplácese hacia abajo para ver los datos de supervisión.
 
@@ -60,15 +60,15 @@ En esta tarea, comprobaremos que la máquina virtual se implementó correctament
 
     ![Captura de pantalla de los cuadros de supervisión de máquinas virtuales.](../images/0903.png)
 
-5. En el entorno de laboratorio, abra una nueva ventana del explorador e introduzca T https://azure.microsoft.com/en-us/resources/templates/?azure-portal=true.
+5. Haga clic en cualquier gráfico. Tenga en cuenta que puede seleccionar **Agregar métrica** y cambiar el tipo de gráfico.
 
-6. En la galería encontrará una serie de plantillas populares y recientemente actualizadas.
-7. Estas plantillas automatizan la implementación de los recursos de Azure, incluida la instalación de paquetes de software populares. 
+6. Vuelva a la hoja **Información general**. (Deslice la barra de alternancia hacia la izquierda)
+7. Haga clic en **Registro de actividad** (panel izquierdo). Los registros de actividad registran eventos tales como la creación o modificación de recursos. 
 
 8. Haga clic en **Agregar filtro** y experimente con la búsqueda de diferentes tipos de eventos y operaciones. 
 
     ![Captura de pantalla de la página Agregar filtros con el tipo de evento seleccionado.](../images/0904.png)
 
-Explore los diferentes tipos de plantillas disponibles.
+¡Enhorabuena! Ha creado con éxito un recurso a partir de una plantilla y ha implementado la plantilla en Azure.
 
-<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click <bpt id="p1">**</bpt>Delete resource group<ept id="p1">**</ept>. Verify the name of the resource group and then click <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept>. Monitor the <bpt id="p1">**</bpt>Notifications<ept id="p1">**</ept> to see how the delete is proceeding.
+**Nota**: Para evitar costes adicionales, opcionalmente, puede quitar este grupo de recursos. Busque grupos de recursos, haga clic en su grupo de recursos y, luego, haga clic en **Eliminar grupo de recursos**. Compruebe el nombre del grupo de recursos y luego haga clic en **Eliminar**. Supervise las **Notificaciones** para ver cómo se realiza la eliminación.

@@ -19,7 +19,7 @@ Nota: Antes de comenzar el laboratorio, deshabilite el firewall público y priva
 
 3. En la pestaña **Datos básicos**, complete la siguiente información (deje los valores predeterminados para todo lo demás):
 
-    | Configuración | Value | 
+    | Configuración | Valor | 
     | --- | --- |
     | Subscription | **Deje los valores predeterminados** |
     | Grupo de recursos | **Crear un grupo de recursos** |
@@ -27,7 +27,7 @@ Nota: Antes de comenzar el laboratorio, deshabilite el firewall público y priva
     | Region | **(EE. UU.) Este de EE. UU.** |
     
    
-4. Click the <bpt id="p1">**</bpt>Review + create<ept id="p1">**</ept> button. Ensure the validation passes. Then hit create to deploy the resource.
+4. Haga clic en el botón **Revisar y Crear**. Asegúrese de que la validación sea exitosa. Luego, seleccione Crear para implementar el recurso.
 
 
 # <a name="task-2-create-two-virtual-machines"></a>Tarea 2: Creación de dos máquinas virtuales
@@ -38,7 +38,7 @@ En esta tarea crearemos dos máquinas virtuales en la red virtual.
 
 2. En la pestaña **Datos básicos**, complete la siguiente información (deje los valores predeterminados para todo lo demás):
 
-   | Configuración | Value | 
+   | Configuración | Valor | 
    | --- | --- |
    | Subscription | **Usar los valores predeterminados** |
    | Grupo de recursos |  **Seleccionar el predeterminado en el menú desplegable** |
@@ -51,15 +51,15 @@ En esta tarea crearemos dos máquinas virtuales en la red virtual.
    | Puertos de entrada seleccionados| **RDP (3389)** |
    
 
-3. Select the <bpt id="p1">**</bpt>Networking<ept id="p1">**</ept> tab. Make sure the virtual machine is placed in the <bpt id="p2">**</bpt>vnet1<ept id="p2">**</ept> virtual network. Review the default settings, but do not make any other changes. 
+3. Seleccione la pestaña **Redes**. Asegúrese de que la máquina virtual esté ubicada en la red virtual **vnet1**. Revise la configuración predeterminada, pero no realice ningún otro cambio. 
 
-4. Click <bpt id="p1">**</bpt>Review + create<ept id="p1">**</ept>. After the Validation passes, click <bpt id="p1">**</bpt>Create<ept id="p1">**</ept>. Deployment times can vary but it can generally take between three to six minutes to deploy.
+4. Haga clic en **Revisar + crear**. Después de que la validación sea exitosa, haga clic en **Crear**. Los tiempos de implementación pueden variar, pero generalmente la implementación demora entre tres y seis minutos.
 
 5. Supervise su implementación, pero continúe con el siguiente paso. 
 
-6. Create a second virtual machine by repeating steps <bpt id="p1">**</bpt>2 to 4<ept id="p1">**</ept> above. Make sure you use a different virtual machine name, that the virtual machine is in the same virtual network, and is using a new public IP address:
+6. Cree una segunda máquina virtual repitiendo los pasos anteriores del **2 al 4**. Asegúrese de usar un nombre de máquina virtual diferente, de que la máquina virtual está dentro de la misma red virtual y de que usa una nueva dirección IP pública:
 
-    | Configuración | Value |
+    | Configuración | Valor |
     | --- | --- |
     | Grupo de recursos | **seleccione valor predeterminado en el menú desplegable (igual que la tarea 1-3 y la tarea 2-2)** |
     | Nombre de la máquina virtual |  **vm2** |
@@ -70,9 +70,9 @@ En esta tarea crearemos dos máquinas virtuales en la red virtual.
 
 # <a name="task-3-test-the-connection"></a>Tarea 3: Probar la conexión 
 
-In this task, we will try to test whether the virtual machines can communicate (ping) each other. If not we will install a rule to allow an ICMP connection. Usually ICMP connections are automatically blocked.
+En esta tarea, probaremos si las máquinas virtuales pueden comunicarse (hacer ping) entre sí. En el caso de que no puedan, instalaremos una regla para permitir una conexión ICMP. Normalmente, las conexiones ICMP se bloquean automáticamente.
 
-1. From the <bpt id="p1">**</bpt>All resources<ept id="p1">**</ept> blade, search for <bpt id="p2">**</bpt>vm1<ept id="p2">**</ept>, open its <bpt id="p3">**</bpt>Overview<ept id="p3">**</ept> blade, and make sure its <bpt id="p4">**</bpt>Status<ept id="p4">**</ept> is <bpt id="p5">**</bpt>Running<ept id="p5">**</ept>. You may need to <bpt id="p1">**</bpt>Refresh<ept id="p1">**</ept> the page.
+1. Desde la hoja **Todos los recursos**, busque **vm1**, abra la hoja **Información general** y asegúrese de que su **Estado** sea **En ejecución**. Es posible que tenga que **actualizar** la página.
 
 2. En la hoja **Información general**, seleccione **Conectar** y después seleccione **RDP** en el menú desplegable.
 
@@ -84,7 +84,7 @@ In this task, we will try to test whether the virtual machines can communicate (
 
 5. En la ventana **Seguridad de Windows**, escriba el nombre de usuario **azureuser** y la contraseña **Pa$$w0rd1234** y luego haga clic en **Aceptar**.
 
-6. You may receive a certificate warning during the sign-in process. Click <bpt id="p1">**</bpt>Yes<ept id="p1">**</ept> to create the connection and connect to your deployed VM. You should connect successfully. Close the Windows Server and Dashboard windows that pop up. You should see a Blue Windows background. You are now in your virtual machine.
+6. Puede recibir una advertencia de certificado durante el proceso de inicio de sesión. Haga clic en **Sí** para crear la conexión y conéctese a la VM que ha implementado. Debería conectarse correctamente. Cierre las ventanas de Windows Server y el panel que aparecen. Debería ver un fondo azul de Windows. Ahora se encuentra en la máquina virtual.
 
 7. En **ambas** máquinas virtuales recién creadas, conéctese a través de RDP y deshabilite el firewall público y privado. Para ello, abra menú Inicio > Configuración > Network and Internet > Locate Windows Firewall (Menú Inicio > Configuración > Network e Internet > Locate Windows Firewall).
 
@@ -96,9 +96,9 @@ In this task, we will try to test whether the virtual machines can communicate (
    ping vm2
    ```
 
- 10. You should be successful. You have pinged VM2 from VM1.
+ 10. Debería tener éxito. Ha hecho ping a VM2 desde VM1.
 
 
-<bpt id="p1">**</bpt>Congratulations!<ept id="p1">**</ept> You have configured and deployed two virtual machines in a virtual network, and then you were able to connect them.
+**¡Enhorabuena!** Ha configurado e implementado dos máquina virtuales en una red virtual, y luego las ha conectado.
 
-<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click <bpt id="p1">**</bpt>Delete resource group<ept id="p1">**</ept>. Verify the name of the resource group and then click <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept>. Monitor the <bpt id="p1">**</bpt>Notifications<ept id="p1">**</ept> to see how the delete is proceeding.
+**Nota**: Para evitar costes adicionales, opcionalmente, puede quitar este grupo de recursos. Busque grupos de recursos, haga clic en su grupo de recursos y, luego, haga clic en **Eliminar grupo de recursos**. Compruebe el nombre del grupo de recursos y luego haga clic en **Eliminar**. Supervise las **Notificaciones** para ver cómo se realiza la eliminación.

@@ -33,7 +33,7 @@ En esta tarea, crearemos un aplicación de funciones.
 
 5. Espere la notificación de que el recurso ha sido creado.
 
-6. When the deployment has completed, click Go to resource from the deployment blade. Alternatively, navigate back to the <bpt id="p1">**</bpt>Function App<ept id="p1">**</ept> blade, click <bpt id="p2">**</bpt>Refresh<ept id="p2">**</ept> and verify that the newly created function app has the <bpt id="p3">**</bpt>Running<ept id="p3">**</ept> status. 
+6. Cuando la implementación se haya completado, haga clic en Ir al recurso desde la hoja de implementación. Como alternativa, vuelva a la hoja **Aplicación de funciones**, haga clic en **Actualizar** y compruebe que la aplicación de funciones recién creada muestra el estado **En ejecución**. 
 
     ![Captura de pantalla de la página Aplicación de funciones con la nueva aplicación de funciones.](../images/0701.png)
 
@@ -45,25 +45,25 @@ En esta tarea, usaremos la función API de Webhook para mostrar un mensaje cuand
 
 2. En la hoja Aplicación de funciones, en la sección **Funciones**, haga clic en **Funciones** y luego en **+ Agregar, + Crear, o +Nuevo**.
 
-    ![Screenshot of the choose a development environment step in the azure functions for dot net getting started pane inside Azure portal. The display elements for creating a new in-portal function are highlighted. The highlighted elements are expand the function app, add new function, in-portal, and the continue button.](../images/0702.png)
+    ![Captura de pantalla del paso elegir un entorno de desarrollo en Azure Functions para el panel Introducción .NET dentro de Azure Portal. Se resaltan los elementos de visualización para crear una nueva función en el portal. Los elementos resaltados son expandir la aplicación de funciones, agregar nuevas funciones, en el portal y el botón continuar.](../images/0702.png)
 
-3. An <bpt id="p1">**</bpt>Add function<ept id="p1">**</ept> pop-up window will appear on the right. In the <bpt id="p1">**</bpt>Select a template<ept id="p1">**</ept> section click <bpt id="p2">**</bpt>HTTP trigger<ept id="p2">**</ept>. Click <bpt id="p1">**</bpt>Add<ept id="p1">**</ept> 
+3. A la derecha aparecerá la ventana emergente **Agregar función**. En la sección **Seleccionar una plantilla**, haga clic en **Desencadenador de HTTP**. Haga clic en **Agregar**. 
 
-    ![Screenshot of the create a function step in the azure functions for dot net getting started pane inside Azure portal. The HTTP trigger card is highlighted to illustrate the display elements used to add a new webhook to an Azure function.](../images/0702a.png)
+    ![Captura de pantalla del paso Crear una función en Azure Functions para el panel Introducción .NET dentro de Azure Portal. La tarjeta de desencadenador HTTP se resalta para ilustrar los elementos de visualización utilizados para agregar un nuevo webhook a una función de Azure.](../images/0702a.png)
 
 4. En la hoja **DesencadenadorHttp1**, en la sección **Desarrollador**, haga clic en **Código y prueba**. 
 
-5. On the <bpt id="p1">**</bpt>Code + Test<ept id="p1">**</ept> blade, review the auto-generated code and note that the code is designed to run an HTTP request and log information. Also, notice the function returns a Hello message with a name. 
+5. En la hoja **Código y prueba**, revise el código generado automáticamente y tenga en cuenta que está diseñado para ejecutar una solicitud HTTP y registrar información. Además, observe que la función devuelve un mensaje de saludo con un nombre. 
 
-    ![Screenshot of the function code. The Hello message is hightlighted.](../images/0704.png)
+    ![Captura de pantalla del código de función. El mensaje de saludo está resaltado.](../images/0704.png)
 
 6. Haga clic en **Obtener URL de función** desde la sección superior del editor de funciones. 
 
 7. Asegúrese de que el valor en la lista desplegable **Clave** se establece en **predeterminado** y haga clic en **Copiar** para copiar la función URL. 
 
-    ![Screenshot of the get function URL pane inside the function editor in Azure portal. The display elements get function URL button, set key dropdown, and copy URL button are highlighted to indicate how to obtain and copy the function URL from the function editor.](../images/0705.png)
+    ![Captura de pantalla del panel URL de obtención de funciones dentro del editor de funciones en Azure Portal. Los elementos de visualización obtienen el botón URL de la función, establecen el menú desplegable de teclas y el botón Copiar URL se resaltan para indicar cómo obtener y copiar la URL de la función desde el editor de funciones.](../images/0705.png)
 
-8. Open a new browser tab and paste the copied function URL into your web browser's address bar. When the page is requested the function will run. Notice the returned message stating that the function requires a name in the request body.
+8. Abra una nueva pestaña del explorador y pegue la URL de la función copiada en la barra de direcciones del explorador web. Cuando se solicite la página, la función se ejecutará. Observe el mensaje devuelto que indica que la función requiere un nombre en el cuerpo de la solicitud.
 
     ![Captura de pantalla del mensaje para proporcionar un nombre.](../images/0706.png)
 
@@ -71,12 +71,12 @@ En esta tarea, usaremos la función API de Webhook para mostrar un mensaje cuand
 
     **Nota**: Por ejemplo, si su nombre es Cindy, la URL final tendrá este aspecto: `https://azfuncxxx.azurewebsites.net/api/HttpTrigger1?code=X9xx9999xXXXXX9x9xxxXX==&name=cindy`
 
-    ![Screenshot of a highlighted function URL and an appended example user name in the address bar of a web browser. The hello message and user name are also highlighted to illustrate the output of the function in the main browser window.](../images/0707.png)
+    ![Captura de pantalla de una URL de función resaltada y un nombre de usuario de ejemplo anexado en la barra de direcciones de un explorador web. El mensaje de saludo y el nombre de usuario también se resaltan para ilustrar el resultado de la función en la ventana principal del explorador.](../images/0707.png)
 
-10. When you hit enter, your function runs and every invocation is traced. To view the traces, return to the Portal <bpt id="p1">**</bpt>HttpTrigger1 <ph id="ph1">\|</ph> Code + Test<ept id="p1">**</ept> blade and click <bpt id="p2">**</bpt>Monitor<ept id="p2">**</ept>. You can <bpt id="p1">**</bpt>configure<ept id="p1">**</ept> Application Insights by selecting the timestamp and click <bpt id="p2">**</bpt>Run query in Application Insights<ept id="p2">**</ept>.
+10. Cuando pulse Intro, la función se ejecutará y se realizará un seguimiento de todas las invocaciones. Para ver los seguimientos, vuelva al panel **HttpTrigger1 \| Código y prueba**  del portal y haga clic en **Supervisar**. Para **configurar** Application Insights, seleccione la marca de tiempo y haga clic en **Ejecutar consulta en Application Insights**.
 
     ![Captura de pantalla de un registro de información de seguimiento resultante de ejecutar la función dentro del editor de funciones en Azure Portal.](../images/0709.png) 
 
-Congratulations! You have created a Function App to display a Hello message when there is an HTTP request.  
+¡Enhorabuena! Ha creado una aplicación de funciones para mostrar un mensaje de saludo cuando hay una solicitud HTTP.  
 
-<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click <bpt id="p1">**</bpt>Delete resource group<ept id="p1">**</ept>. Verify the name of the resource group and then click <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept>. Monitor the <bpt id="p1">**</bpt>Notifications<ept id="p1">**</ept> to see how the delete is proceeding.
+**Nota**: Para evitar costes adicionales, opcionalmente, puede quitar este grupo de recursos. Busque grupos de recursos, haga clic en su grupo de recursos y, luego, haga clic en **Eliminar grupo de recursos**. Compruebe el nombre del grupo de recursos y luego haga clic en **Eliminar**. Supervise las **Notificaciones** para ver cómo se realiza la eliminación.

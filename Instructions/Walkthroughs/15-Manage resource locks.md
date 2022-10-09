@@ -5,7 +5,7 @@ wts:
 ---
 # <a name="15---manage-resource-locks-5-min"></a>15: Administrar bloqueos de recursos (5 minutos)
 
-In this walkthrough, we will add a lock to the resource group and test deleting the resource group. Locks can be applied in a subscription to resource groups, or individual resources to prevent accidental deletion or modification of critical resources.  
+En este tutorial, agregaremos un bloqueo al grupo de recursos y probaremos la eliminación del grupo de recursos. Se pueden aplicar bloqueos a una suscripción de un grupo de recursos o a recursos individuales para evitar la eliminación o modificación accidental de recursos críticos.  
 
 
 # <a name="task-1--add-a-lock-to-the-resource-group-and-test-deletion"></a>Tarea 1:  Agregar un bloqueo al grupo de recursos y probar su eliminación
@@ -22,7 +22,7 @@ En esta tarea, agregaremos un bloqueo de recursos al grupo de recursos y probare
 
     ![Captura de pantalla del grupo de recursos misbloqueosGR que muestra el panel Bloqueos.](../images/1601.png)
 
-5. Configure the new lock. When you are done click <bpt id="p1">**</bpt>OK<ept id="p1">**</ept>. 
+5. Configure el nuevo bloqueo. Al finalizar, haga clic en **Aceptar**. 
 
     | Configuración | Valor |
     | -- | -- |
@@ -30,7 +30,7 @@ En esta tarea, agregaremos un bloqueo de recursos al grupo de recursos y probare
     | Tipo de bloqueo | **Eliminar** |
     | | |
 
-6. Click <bpt id="p1">**</bpt>Overview<ept id="p1">**</ept> and click <bpt id="p2">**</bpt>Delete resource group<ept id="p2">**</ept>. Type the name of the resource group and click <bpt id="p1">**</bpt>OK<ept id="p1">**</ept>. You receive an error message stating the resource group is locked and can't be deleted.
+6. Haga clic en **Información general** y en **Eliminar grupo de recursos**. Escriba el nombre del grupo de recursos y haga clic en **Aceptar**. Recibirá un mensaje de error que indica que el grupo de recursos está bloqueado y que no se puede eliminar.
 
     ![Captura de pantalla del error relativo al bloqueo frente a la eliminación.](../images/1602.png)
 
@@ -40,7 +40,7 @@ En esta tarea, probaremos si el bloqueo de recursos protege una cuenta de almace
 
 1. Desde la hoja **Todos los servicios**, busque y seleccione **Cuentas de almacenamiento** y haga clic en **+ Agregar, + Crear, o + Nuevo** 
 
-2. En este tutorial, agregaremos un bloqueo al grupo de recursos y probaremos la eliminación del grupo de recursos.
+2. En el panel **+Agregar, +Nuevo, o +Crear** de la página **Cuentas de almacenamiento**, complete la siguiente información (reemplace **xxxx** en el nombre de la cuenta de almacenamiento con letras y dígitos de modo que el nombre sea único a nivel global). Deje los valores predeterminados para todo lo demás.
 
     | Configuración | Valor | 
     | --- | --- |
@@ -56,15 +56,15 @@ En esta tarea, probaremos si el bloqueo de recursos protege una cuenta de almace
 
 3. Haga clic en **Revisar y crear** para revisar la configuración de su cuenta de almacenamiento y permitir que Azure valide la configuración. 
 
-4. Se pueden aplicar bloqueos a una suscripción de un grupo de recursos o a recursos individuales para evitar la eliminación o modificación accidental de recursos críticos. 
+4. Una vez validada, haga clic en **Crear**. Espere la notificación de que la cuenta se creó correctamente. 
 
 5.  Espere la notificación de que la cuenta de almacenamiento se creó correctamente. 
 
-6. Access your new storage account and from the <bpt id="p1">**</bpt>Overview<ept id="p1">**</ept> pane, click <bpt id="p2">**</bpt>Delete<ept id="p2">**</ept>. You receive an error message stating the resource or its parent has a delete lock. 
+6. Acceda a su nueva cuenta de almacenamiento y, desde el panel **Información general**, haga clic en **Eliminar**. Recibirá un mensaje de error que indica que el recurso o su elemento primario tiene un bloqueo de eliminación. 
 
     ![Captura de pantalla del error al eliminar la cuenta de almacenamiento.](../images/1603.png)
 
-    <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Although we did not create a lock specifically for the storage account, we did create a lock at the resource group level, which contains the storage account. As such, this <bpt id="p1">*</bpt>parent<ept id="p1">*</ept> level lock prevents us from deleting the resource and the storage account inherits the lock from the parent.
+    **Nota**: Aunque no hayamos creado específicamente un bloqueo para la cuenta de almacenamiento, hemos creado un bloqueo en el nivel del grupo de recursos que contiene la cuenta de almacenamiento. Como tal, este bloqueo de nivel *primario* nos impide eliminar el recurso y la cuenta de almacenamiento hereda el bloqueo del nivel primario.
 
 # <a name="task-3-remove-the-resource-lock"></a>Tarea 3: Quitar el bloqueo de recurso
 
@@ -78,6 +78,6 @@ En esta tarea quitaremos el bloqueo del recurso y lo probaremos.
 
 3. Vuelva a la hoja de la cuenta de almacenamiento y confirme que ahora puede eliminar el recurso.
 
-Congratulations! You created a resource group, added a lock to resource group and tested deletion, tested deleting a resource in the resource group, and removed the resource lock. 
+¡Enhorabuena! Creó un grupo de recursos, agregó un bloqueo al grupo de recursos y probó su eliminación, probó la eliminación de un recurso en el grupo de recursos y quitó el bloqueo de un recurso. 
 
-<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click <bpt id="p1">**</bpt>Delete resource group<ept id="p1">**</ept>. Verify the name of the resource group and then click <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept>. Monitor the <bpt id="p1">**</bpt>Notifications<ept id="p1">**</ept> to see how the delete is proceeding.
+**Nota**: Para evitar costes adicionales, opcionalmente, puede quitar este grupo de recursos. Busque grupos de recursos, haga clic en su grupo de recursos y, luego, haga clic en **Eliminar grupo de recursos**. Compruebe el nombre del grupo de recursos y luego haga clic en **Eliminar**. Supervise las **Notificaciones** para ver cómo se realiza la eliminación.

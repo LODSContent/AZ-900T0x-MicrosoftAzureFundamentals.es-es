@@ -15,11 +15,11 @@ En esta tarea, asignaremos el rol de colaborador de la máquina virtual.
 
 2. Desde la hoja **Todos los servicios**, busque y seleccione **Grupos de recursos** y luego haga clic en **+ Agregar, + Crear, o + Nuevo**.
 
-3. Create a new resource group. Click <bpt id="p1">**</bpt>Create<ept id="p1">**</ept> when you are finished. 
+3. Cree un nuevo grupo de recursos. Haga clic en **Crear** cuando haya acabado. 
 
     | Configuración | Valor |
     | -- | -- |
-    | Subscription | **Uso de los valores predeterminados** |
+    | Suscripción | **Uso de los valores predeterminados** |
     | Grupo de recursos | **myRGRBAC** |
     | Region | **(EE. UU.) Este de EE. UU.** |
    
@@ -28,11 +28,11 @@ En esta tarea, asignaremos el rol de colaborador de la máquina virtual.
 
 5. Use **Actualizar** en la página del grupo de recursos y haga clic en la entrada que representa el grupo de recursos recién creado.
 
-6. Click on the <bpt id="p1">**</bpt>Access control (IAM)<ept id="p1">**</ept> blade, and then switch to the <bpt id="p2">**</bpt>Roles<ept id="p2">**</ept> tab. Scroll through the large number of roles definitions that are available. Use the Informational icons to get an idea of each role's permissions. Notice there is also information on the number of users and groups that are assigned to each role.
+6. Haga clic en la hoja **Control de acceso (IAM)** y luego cambie a la pestaña **Roles**. Desplácese por la gran cantidad de definiciones de rol disponibles. Use los iconos informativos para tener una idea de los permisos de cada rol. También hay información sobre el número de usuarios y grupos asignados a cada rol.
 7. 
 ![imagen](https://user-images.githubusercontent.com/89808319/144266949-f19d91ab-31d6-4c8b-af36-c00035925cf0.png)
 
-7. Switch to the <bpt id="p1">**</bpt>Role assignments<ept id="p1">**</ept> tab of the <bpt id="p2">**</bpt>myRGRBAC - Access control (IAM)<ept id="p2">**</ept> blade, click <bpt id="p3">**</bpt>+ Add<ept id="p3">**</ept> and then click <bpt id="p4">**</bpt>Add role assignment<ept id="p4">**</ept>. Search for the Virtual Machine Contributor role and select. Switch to the "Members" tab and Assign access to: User, group, or service principal. Then click + Select members and type in your name to the popup search function and hit 'select.' Then hit 'Review and Assign'
+7. Cambie a la pestaña **Asignaciones de roles** en la hoja **miRGRBAC - Control de acceso (IAM)** , haga clic en **+ Agregar** y, luego, haga clic en **Agregar asignación de roles**. Busque y seleccione el rol Colaborador de la máquina virtual. Cambie a la pestaña "Miembros" y asigne acceso a: usuario, grupo o entidad de servicio. Luego, haga clic en + Seleccionar miembros y escriba su nombre en la función de búsqueda emergente y presione "Seleccionar". Después, presione "Revisar y asignar".
 
     
     ![imagen](https://user-images.githubusercontent.com/89808319/144266255-3a0f8574-9358-4c21-8f95-3503747e77c8.png)
@@ -61,7 +61,7 @@ En esta tarea, veremos el registro de actividad para comprobar la asignación de
 
     **Nota**: ¿Sabe cómo quitar su asignación de roles?
 
-Congratulations! You created a resource group, assigned an access role to it and viewed activity logs. 
+¡Enhorabuena! Ha creado un grupo de recursos, le ha asignado un rol de acceso y ha visualizado los registros de actividad. 
 
-<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click <bpt id="p1">**</bpt>Delete resource group<ept id="p1">**</ept>. Verify the name of the resource group and then click <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept>. Monitor the <bpt id="p1">**</bpt>Notifications<ept id="p1">**</ept> to see how the delete is proceeding.
+**Nota**: Para evitar costes adicionales, opcionalmente, puede quitar este grupo de recursos. Busque grupos de recursos, haga clic en su grupo de recursos y, luego, haga clic en **Eliminar grupo de recursos**. Compruebe el nombre del grupo de recursos y luego haga clic en **Eliminar**. Supervise las **Notificaciones** para ver cómo se realiza la eliminación.
 

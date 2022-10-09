@@ -6,7 +6,7 @@ wts:
 
 # <a name="03---deploy-azure-container-instances-10-min"></a>3: Implementar Azure Container Instances (10 minutos)
 
-In this walkthrough we create, configure, and deploy a container by using Azure Container Instances (ACI) in the Azure Portal. The container is a Welcome to ACI web application that displays a static HTML page. 
+En este tutorial crearemos, configuramos e implementamos un contenedor mediante Azure Container Instances (ACI) en Azure Portal. El contenedor es una aplicación web Bienvenido a ACI que muestra una página HTML estática. 
 
 # <a name="task-1-create-a-container-instance"></a>Tarea 1: Creación de una instancia de contenedor 
 
@@ -18,7 +18,7 @@ En esta tarea, se creará una instancia de contenedor para la aplicación web.
 
 3. Dé los siguientes detalles básicos para la nueva instancia de contenedor (deje los valores predeterminados para todo lo demás): 
 
-    | Configuración| Value|
+    | Configuración| Valor|
     |----|----|
     | Subscription | ***Usar los valores predeterminados*** |
     | Grupo de recursos | **Crear un grupo de recursos** |
@@ -31,14 +31,14 @@ En esta tarea, se creará una instancia de contenedor para la aplicación web.
     | Size| ***Deje la opción predeterminada.***|
 
 
-4. Configure the Networking tab (replace <bpt id="p1">**</bpt>xxxxx<ept id="p1">**</ept> with letters and digits such that the name is globally unique). Leave all other settings at their default values.
+4. Configure la pestaña Redes (reemplace **xxxx** con letras y dígitos para que el nombre sea único a nivel global). Deje todas las demás configuraciones con sus valores predeterminados.
 
     | Configuración| Value|
     |--|--|
     | Etiqueta de nombre DNS| **mycontainerdnsxxxxx** |
 
     
-    <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Your container will be publicly reachable at dns-name-label.region.azurecontainer.io. If you receive a <bpt id="p1">**</bpt>DNS name label not available<ept id="p1">**</ept> error message following the deployment, specify a different DNS name label (replacing the xxxxx) and re-deploy. 
+    **Nota**: El contenedor será accesible públicamente en dns-name-label.region.azurecontainer.io. Si recibe un mensaje de error que dice **Etiqueta de nombre DNS no disponible** después de la implementación, especifique una etiqueta de nombre DNS diferente (no use xxxx) y vuelva a implementar. 
 
 5. Haga clic en **Revisar y crear** para iniciar el proceso de validación automática.
 
@@ -59,11 +59,11 @@ En esta tarea, se comprobará que la instancia del contenedor está en ejecució
 
     ![Captura de pantalla del panel de información general para el contenedor recién creado en Azure Portal, con el FQDN resaltado. ](../images/0202.png)
 
-2. En este tutorial crearemos, configuramos e implementamos un contenedor mediante Azure Container Instances (ACI) en Azure Portal. 
+2. Copie el FQDN del contenedor en una nueva pestaña del explorador web y pulse **Intro**. Debería aparecer la página principal. 
 
     ![Captura de pantalla del mensaje de bienvenida de ACI que se muestra en un explorador web.](../images/0203.png)
 
 
-El contenedor es una aplicación web Bienvenido a ACI que muestra una página HTML estática.
+**¡Enhorabuena!** Ha usado Azure Portal para implementar con éxito una aplicación en un contenedor de Azure Container Instances.
 
-<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click <bpt id="p1">**</bpt>Delete resource group<ept id="p1">**</ept>. Verify the name of the resource group and then click <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept>. Monitor the <bpt id="p1">**</bpt>Notifications<ept id="p1">**</ept> to see how the delete is proceeding.
+**Nota**: Para evitar costes adicionales, opcionalmente, puede quitar este grupo de recursos. Busque grupos de recursos, haga clic en su grupo de recursos y, luego, haga clic en **Eliminar grupo de recursos**. Compruebe el nombre del grupo de recursos y luego haga clic en **Eliminar**. Supervise las **Notificaciones** para ver cómo se realiza la eliminación.

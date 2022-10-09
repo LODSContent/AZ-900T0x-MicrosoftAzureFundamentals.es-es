@@ -57,22 +57,22 @@ En esta tarea, crearemos una base de datos SQL basada en la base de datos de eje
 
     ![Captura de pantalla de la pestaña Configuración adicional de la hoja Crear base de datos de SQL con la configuración seleccionada según la tabla y el botón Revisar y crear resaltado.](../images/0501c.png)
 
-7. Click <bpt id="p1">**</bpt>Review + create<ept id="p1">**</ept> and then click <bpt id="p2">**</bpt>Create<ept id="p2">**</ept> to deploy and provision the resource group, server, and database. It can take approx. 2 to 5 minutes to deploy.
+7. Haga clic en **Revisar y crear** y, a continuación, en **Crear** para implementar y aprovisionar el grupo de recursos, el servidor y la base de datos. La implementación puede tardar de 2 a 5 minutos.
 
 
 # <a name="task-2-test-the-database"></a>Tarea 2: Probar la base de datos.
 
 En esta tarea, configuraremos SQL Server y ejecutaremos una consulta SQL. 
 
-1. When the deployment has completed, click Go to resource from the deployment blade. Alternatively, from the <bpt id="p1">**</bpt>All Resources<ept id="p1">**</ept> blade, search and select <bpt id="p2">**</bpt>Databases<ept id="p2">**</ept>, then <bpt id="p3">**</bpt>SQL databases<ept id="p3">**</ept> ensure your new database was created. You may need to <bpt id="p1">**</bpt>Refresh<ept id="p1">**</ept> the page.
+1. Cuando la implementación se haya completado, haga clic en Ir al recurso desde la hoja de implementación. Como alternativa, busque y seleccione **Bases de datos** y luego **Bases de datos SQL** en la hoja **Todos los recursos** y asegúrese de que se haya creado la nueva base de datos. Es posible que tenga que **actualizar** la página.
 
     ![Captura de pantalla del servidor y la base de datos SQL que se acaban de implementar.](../images/0502.png)
 
-2. Click the <bpt id="p1">**</bpt>db1<ept id="p1">**</ept> entry representing the SQL database you created. On the db1 blade click <bpt id="p1">**</bpt>Query editor (preview)<ept id="p1">**</ept>.
+2. Haga clic en la entrada **bd1**, que representa la base de datos SQL que ha creado. En la hoja bd1, haga clic en **Editor de Power Query (versión preliminar)** .
 
 3. Inicie sesión como **sqluser** con la contraseña **Pa$$w0rd1234**.
 
-4. You will not be able to login. Read the error closely and make note of the IP address that needs to be allowed through the firewall. 
+4. No podrá iniciar sesión. Lea atentamente el error y tome nota de la dirección IP que debe permitirse a través del firewall. 
 
     ![Captura de pantalla de la página de inicio de sesión del Editor de consultas con el error de dirección IP.](../images/0503.png)
 
@@ -82,13 +82,13 @@ En esta tarea, configuraremos SQL Server y ejecutaremos una consulta SQL.
 
 6. En la hoja **Información general** de bd1, haga clic en **Establecer el firewall del servidor**, que se encuentra en la parte superior central de la pantalla Información general.
 
-7. Click <bpt id="p1">**</bpt>+ Add client IP<ept id="p1">**</ept> (top menu bar) to add the IP address referenced in the error. (it may have autofilled for you - if not paste it into the IP address fields). Be sure to <bpt id="p1">**</bpt>Save<ept id="p1">**</ept> your changes. 
+7. Haga clic en **Agregar IP de cliente** (barra de menú superior) para agregar la dirección IP a la que hace referencia el error (es posible que se haya rellenado automáticamente por usted. En caso contrario, péguela en los campos de la dirección IP). Asegúrese de **Guardar** los cambios. 
 
     ![Captura de pantalla de la página de configuración del firewall del servidor SQL con la nueva regla de IP resaltada.](../images/0506.png)
 
-8. Return to your SQL database (slide the bottom toggle bar to the left) and click on <bpt id="p1">**</bpt>Query Editor (Preview)<ept id="p1">**</ept>. Try to login again as <bpt id="p1">**</bpt>sqluser<ept id="p1">**</ept> with the password <bpt id="p2">**</bpt>Pa$$w0rd1234<ept id="p2">**</ept>. This time you should succeed. Note that it may take a couple of minutes for the new firewall rule to be deployed. 
+8. Vuelva a su base de datos SQL (deslice la barra de alternancia de la parte inferior hacia la izquierda) y haga clic en **Editor de Power Query (versión preliminar)** . Intente volver a iniciar sesión como **sqluser** con la contraseña **Pa$$w0rd1234**. Esta vez debería poder hacerlo. Tenga en cuenta que la implementación de la nueva regla de firewall puede tardar un par de minutos. 
 
-9. Once you log in successfully, the query pane appears. Enter the following query into the editor pane. 
+9. Una vez haya iniciado sesión correctamente, aparecerá el panel de consultas. Escriba la consulta siguiente en el panel del editor. 
 
     ```SQL
     SELECT TOP 20 pc.Name as CategoryName, p.name as ProductName
@@ -99,10 +99,10 @@ En esta tarea, configuraremos SQL Server y ejecutaremos una consulta SQL.
 
     ![Captura de pantalla del Editor de consultas con el panel de consulta y los comandos ejecutándose correctamente.](../images/0507.png)
 
-10. Click <bpt id="p1">**</bpt>Run<ept id="p1">**</ept>, and then review the query results in the <bpt id="p2">**</bpt>Results<ept id="p2">**</ept> pane. The query should run successfully.
+10. Haga clic en **Ejecutar** y revise los resultados de la consulta en el panel **Resultados**. La consulta debería ejecutarse correctamente.
 
     ![Captura de pantalla del panel del Editor de consultas de base de datos con el código SQL que se ha ejecutado correctamente y la salida visible en el panel de resultados.](../images/0508.png)
 
-Congratulations! You have created a SQL database in Azure and successfully queried the data in that database.
+¡Enhorabuena! Ha creado una base de datos SQL en Azure y ha consultado con éxito los datos en esa base de datos.
 
-<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click <bpt id="p1">**</bpt>Delete resource group<ept id="p1">**</ept>. Verify the name of the resource group and then click <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept>. Monitor the <bpt id="p1">**</bpt>Notifications<ept id="p1">**</ept> to see how the delete is proceeding.
+**Nota**: Para evitar costes adicionales, opcionalmente, puede quitar este grupo de recursos. Busque grupos de recursos, haga clic en su grupo de recursos y, luego, haga clic en **Eliminar grupo de recursos**. Compruebe el nombre del grupo de recursos y luego haga clic en **Eliminar**. Supervise las **Notificaciones** para ver cómo se realiza la eliminación.

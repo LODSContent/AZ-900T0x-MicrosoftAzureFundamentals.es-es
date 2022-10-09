@@ -34,7 +34,7 @@ En esta tarea, utilizaremos PowerShell para crear un grupo de recursos y una má
 
 1. Asegúrese de que **PowerShell** esté seleccionado en el menú desplegable superior izquierdo del panel de Cloud Shell.
 
-2. Verify your new resource group by running the following command in the Powershell window. Press <bpt id="p1">**</bpt>Enter<ept id="p1">**</ept> to run the command.
+2. Compruebe su nuevo grupo de recursos. Para ello, ejecute el siguiente comando en la ventana de PowerShell. Pulsar **Intro**para ejecutar el comando.
 
     ```PowerShell
     Get-AzResourceGroup | Format-Table
@@ -57,7 +57,7 @@ En esta tarea, utilizaremos PowerShell para crear un grupo de recursos y una má
 
 5. Una vez que se haya creado la VM, cierre el panel de Cloud Shell en la sesión de PowerShell.
 
-6. In the Azure portal, search for <bpt id="p1">**</bpt>Virtual machines<ept id="p1">**</ept> and verify the <bpt id="p2">**</bpt>myVMPS<ept id="p2">**</ept> is running. This may take a few minutes.
+6. En Azure Portal, busque **Máquinas virtuales** y compruebe que **miVMPS** se esté ejecutando. Esta operación puede tardar unos minutos.
 
     ![Captura de pantalla de la página de Virtual Machines con myVMPS en estado de ejecución.](../images/1001.png)
 
@@ -71,7 +71,7 @@ En esta tarea, practicaremos la ejecución de comandos de PowerShell desde Cloud
 
 2. Asegúrese de que **PowerShell** esté seleccionado en el menú desplegable superior izquierdo del panel de Cloud Shell.
 
-3. Retrieve information about your virtual machine including name, resource group, location, and status. Notice the PowerState is <bpt id="p1">**</bpt>running<ept id="p1">**</ept>.
+3. Recupere información sobre su máquina virtual, incluido el nombre, el grupo de recursos, la ubicación y el estado. Observe que el PowerState se está **ejecutando**.
 
     ```PowerShell
     Get-AzVM -name myVMPS -status | Format-Table -autosize
@@ -82,9 +82,9 @@ En esta tarea, practicaremos la ejecución de comandos de PowerShell desde Cloud
     ```PowerShell
     Stop-AzVM -ResourceGroupName myRGPS -Name myVMPS
     ```
-5. When prompted confirm (Yes) to the action. Wait for <bpt id="p1">**</bpt>Succeeded<ept id="p1">**</ept> status.
+5. Cuando se le pida, confirme (Sí) a la acción. Espere a que se muestre el estado **Completado correctamente**.
 
-6. Verify your virtual machine state. The PowerState should now be <bpt id="p1">**</bpt>deallocated<ept id="p1">**</ept>. You can also verify the virtual machine status in the portal. Close Cloudshell.
+6. Compruebe el estado de su máquina virtual. Ahora PowerState debería estar **desasignado**. También puede comprobar el estado de la máquina virtual en el portal. Cierre Cloud Shell.
 
     ```PowerShell
     Get-AzVM -name myVMPS -status | Format-Table -autosize
@@ -98,7 +98,7 @@ En esta tarea, revisaremos las recomendaciones de Azure Advisor para nuestra má
 
 1. Desde la hoja **Todos los servicios**, busque y seleccione **Advisor**. 
 
-2. On the <bpt id="p1">**</bpt>Advisor<ept id="p1">**</ept> blade, select <bpt id="p2">**</bpt>Overview<ept id="p2">**</ept>. Notice recommendations are grouped by Reliability, Security, Performance, and Cost. 
+2. En la hoja **Advisor**, seleccione **Información general**. Las recomendaciones de aviso están agrupadas por Confiabilidad, Seguridad, Rendimiento y Coste. 
 
     ![Captura de pantalla de la página Visión general de Advisor. ](../images/1003.png)
 
@@ -114,6 +114,6 @@ En esta tarea, revisaremos las recomendaciones de Azure Advisor para nuestra má
 
 6. Si tiene tiempo, continúe experimentando con Azure PowerShell. 
 
-Congratulations! You have configured Cloud Shell, created a virtual machine using PowerShell, practiced with PowerShell commands, and viewed Advisor recommendations.
+¡Enhorabuena! Ha configurado Cloud Shell, creado una máquina virtual con PowerShell, practicado con comandos de PowerShell y visto las recomendaciones de Advisor.
 
-<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click <bpt id="p1">**</bpt>Delete resource group<ept id="p1">**</ept>. Verify the name of the resource group and then click <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept>. Monitor the <bpt id="p1">**</bpt>Notifications<ept id="p1">**</ept> to see how the delete is proceeding.
+**Nota**: Para evitar costes adicionales, opcionalmente, puede quitar este grupo de recursos. Busque grupos de recursos, haga clic en su grupo de recursos y, luego, haga clic en **Eliminar grupo de recursos**. Compruebe el nombre del grupo de recursos y luego haga clic en **Eliminar**. Supervise las **Notificaciones** para ver cómo se realiza la eliminación.

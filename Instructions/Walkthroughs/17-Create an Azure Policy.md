@@ -13,9 +13,9 @@ En esta tarea, configuraremos la directiva de ubicación permitida y la asignare
 
 1. Inicie sesión en [Azure Portal](https://portal.azure.com).
 
-2. From the <bpt id="p1">**</bpt>All services<ept id="p1">**</ept> blade, search for and select <bpt id="p2">**</bpt>Policy<ept id="p2">**</ept>, under the <bpt id="p3">**</bpt>Authoring<ept id="p3">**</ept> section click <bpt id="p4">**</bpt>Definitions<ept id="p4">**</ept>.  Take a moment to review the list of built-in policy definitions. For example, in the <bpt id="p1">**</bpt>Category<ept id="p1">**</ept> drop-down select only <bpt id="p2">**</bpt>Compute<ept id="p2">**</ept>. Notice the <bpt id="p1">**</bpt>Allowed virtual machine size SKUs<ept id="p1">**</ept> definition enables you to specify a set of virtual machine SKUs that your organization can deploy.
+2. Desde la hoja **Todos los servicios**, busque y seleccione **Directiva**, bajo la sección **Creación**, haga clic en **Definiciones**.  Tómese un momento para revisar la lista de definiciones de las directivas integradas. Por ejemplo, en el menú desplegable **Categoría** seleccione solo **Calcular**. Tenga en cuenta que la definición **SKU de máquina virtual permitidas** le permite especificar un conjunto de SKU de máquinas virtuales que su organización puede implementar.
 
-3. Return to the <bpt id="p1">**</bpt>Policy<ept id="p1">**</ept> page, under the <bpt id="p2">**</bpt>Authoring<ept id="p2">**</ept> section click <bpt id="p3">**</bpt>Assignments<ept id="p3">**</ept>. An assignment is a policy that has been assigned to take place within a specific scope. For example, a definition could be assigned to the subscription scope. 
+3. Vuelva a la página **Directiva**, en la sección **Creación** y haga clic en **Asignaciones**. Una asignación es una directiva que se asignó para que se lleve a cabo dentro de un ámbito específico. Por ejemplo, una definición puede estar asignada al ámbito de suscripción. 
 
 4. Haga clic en **Asignar directiva** en la parte superior de la página **Directiva: Asignaciones**.
 
@@ -28,11 +28,11 @@ En esta tarea, configuraremos la directiva de ubicación permitida y la asignare
     | Nombre de asignación | **Ubicaciones permitidas** |
     
     ![Captura de pantalla del panel Ámbito con los valores de campo rellenados y el botón Seleccionar resaltado. ](../images/1402.png)
-6. On the <bpt id="p1">**</bpt>Parameters<ept id="p1">**</ept> tab, select <bpt id="p2">**</bpt>Japan West<ept id="p2">**</ept>. Click <bpt id="p1">**</bpt>Review + create<ept id="p1">**</ept>, and then <bpt id="p2">**</bpt>Create<ept id="p2">**</ept>.
+6. En la pestaña **Parámetros**, seleccione **Japón Occidental**. Haga clic en **Revisar y crear** y, luego, en **Crear**.
 
-    <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: A scope determines what resources or grouping of resources the policy assignment applies to. In our case we could assign this policy to a specific resource group, however we chose to assign the policy at subscription level. Be aware that resources can be excluded based on the scope configuration. Exclusions are optional.
+    **Nota**: Un ámbito determina a qué recursos o agrupación de recursos se aplica la asignación de directiva. En nuestro caso, podríamos asignar esta directiva a un grupo de recursos específico. Sin embargo, elegimos asignar la directiva en el nivel de suscripción. Tenga en cuenta que los recursos se pueden excluir en función de la configuración del ámbito. Las exclusiones son opcionales.
 
-    <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: This <bpt id="p2">**</bpt>Allowed Locations<ept id="p2">**</ept> policy definition will specify a location into which all resources must be deployed. If a different location is chosen, deployment will not be allowed. For more information view the <bpt id="p1">[</bpt>Azure Policy Samples<ept id="p1">](https://docs.microsoft.com/en-us/azure/governance/policy/samples/index)</ept> page.
+    **Nota**: Esta definición de directiva de **Ubicaciones permitidas** especificará una ubicación en la que se deben implementar todos los recursos. Si se elige una ubicación diferente, no se permitirá la implementación. Para obtener más información, vea la página [Ejemplos de Azure Policy](https://docs.microsoft.com/en-us/azure/governance/policy/samples/index).
 
    ![Captura de pantalla del panel Definiciones disponibles con varios campos resaltados y la opción Auditar las máquinas virtuales que no utilizan discos administrados seleccionada.](../images/1403.png)
 
@@ -44,9 +44,9 @@ En esta tarea probaremos la directiva de Ubicación permitida.
 
 1. En Azure Portal, desde la hoja **Todos los servicios**, busque y seleccione **Cuentas de almacenamiento** y luego haga clic en **+ Crear**.
 
-2. Configure the storage account (replace <bpt id="p1">**</bpt>xxxx<ept id="p1">**</ept> in the name of the storage account with letters and digits such that the name is globally unique). Leave the defaults for everything else. 
+2. Configure la cuenta de almacenamiento (reemplace **xxxx** en el nombre de la cuenta de almacenamiento con letras y dígitos de modo que el nombre sea único a nivel global). Deje los valores predeterminados para todo lo demás. 
 
-    | Configuración | Value | 
+    | Configuración | Valor | 
     | --- | --- |
     | Subscription | **Usar los valores predeterminados** |
     | Grupo de recursos | **myRGPolicy** (crear nuevo) |
@@ -67,20 +67,20 @@ Eliminaremos la asignación de directivas para asegurarnos de que no quedemos bl
 
     **Nota**: En la hoja **Directiva** puede ver el estado de cumplimiento de las diversas directivas que ha asignado.
 
-    <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: The Allowed location policy may show non-compliant resources. If so, these are resources created prior to the policy assignment.
+    **Nota**: La directiva de ubicación permitida puede mostrar recursos no compatibles. Si es así, estos son recursos creados antes de la asignación de la directiva.
  
 2. Haga clic en **Ubicaciones permitidas**. Se abrirá la ventana Cumplimiento de directiva de Ubicaciones permitidas.
 
-3. Desde la hoja **Todos los servicios**, busque y seleccione **Directiva**, bajo la sección **Creación**, haga clic en **Definiciones**.
+3. Haga clic en **Eliminar asignación** en el menú superior. Confirme que desea eliminar la asignación de directiva. Para ello, haga clic en **Sí**.
 
    ![Captura de pantalla del elemento de menú Eliminar asignación.](../images/1407.png)
 
 4. Trate de crear otra cuenta de almacenamiento para asegurarse de que la directiva ya no está vigente.
 
     **Nota**: Entre las situaciones comunes donde la directiva de **Ubicaciones permitidas** puede ser útil se incluyen las siguientes: 
-    - Tómese un momento para revisar la lista de definiciones de las directivas integradas. 
+    - *Seguimiento de costes*: Podría tener diferentes suscripciones para diferentes ubicaciones regionales. La directiva garantizará que todos los recursos se implementen en la región prevista para ayudar con el seguimiento de costes. 
     - *Cumplimiento de Seguridad y residencia de datos*: También podría tener requisitos de residencia de datos, crear suscripciones por cliente o carga de trabajo específica y definir que todos los recursos deban implementarse en un centro de datos particular para garantizar los requisitos de cumplimiento de seguridad y datos.
 
-Por ejemplo, en el menú desplegable **Categoría** seleccione solo **Calcular**.
+¡Enhorabuena! Ha creado una directiva de Azure para restringir la implementación de los recursos de Azure en un centro de datos particular.
 
-Tenga en cuenta que la definición **SKU de máquina virtual permitidas** le permite especificar un conjunto de SKU de máquinas virtuales que su organización puede implementar.
+**Nota**: Para evitar costes adicionales, opcionalmente, puede quitar este grupo de recursos. Busque grupos de recursos, haga clic en su grupo de recursos y, luego, haga clic en **Eliminar grupo de recursos**. Compruebe el nombre del grupo de recursos y luego haga clic en **Eliminar**. Supervise las **Notificaciones** para ver cómo se realiza la eliminación.

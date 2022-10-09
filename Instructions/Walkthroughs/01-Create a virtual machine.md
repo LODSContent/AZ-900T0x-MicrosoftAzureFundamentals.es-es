@@ -40,7 +40,7 @@ En este tutorial crearemos una máquina virtual en Azure Portal, nos conectarem
 
 7. Deje los valores predeterminados restantes y luego haga clic en el botón **Revisar y crear** en la parte inferior de la página.
 
-8. Once Validation is passed click the <bpt id="p1">**</bpt>Create<ept id="p1">**</ept> button. It can take anywhere from five to seven minutes to deploy the virtual machine.
+8. Una vez que supere la validación, haga clic en el botón **Crear**. La implementación de la máquina virtual puede demorar entre cinco y siete minutos.
 
 9. Recibirá actualizaciones en la página de implementación y a través del área **Notificaciones** (el icono en forma de campana de la barra de menús superior).
 
@@ -56,9 +56,9 @@ En esta tarea nos conectaremos a nuestra nueva máquina virtual usando el RDP (e
 
     ![Captura de pantalla de las propiedades de la máquina virtual con el botón Conectar resaltado.](../images/0101.png)
 
-    <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: The following directions tell you how to connect to your VM from a Windows computer. On a Mac, you need an RDP client such as this Remote Desktop Client from the Mac App Store and on a Linux computer you can use an open source RDP client.
+    **Nota**: Las siguientes instrucciones le indican cómo conectarse a su VM desde un equipo con Windows. En un equipo Mac, necesita un cliente RDP, como este cliente de escritorio remoto de Mac App Store, y en un equipo Linux, puede usar un cliente RDP de código abierto.
 
-2. On the <bpt id="p1">**</bpt>Connect to virtual machine<ept id="p1">**</ept> page, keep the default options to connect with the public IP address over port 3389 and click <bpt id="p2">**</bpt>Download RDP File<ept id="p2">**</ept>. A file will download on the bottom left of your screen.
+2. En la página **Conectarse a una máquina virtual**, mantenga las opciones predeterminadas para conectarse con la dirección IP pública a través del puerto 3389 y haga clic en **Descargar archivo RDP**. Se descargará un archivo en la parte inferior izquierda de su pantalla.
 
 3. **Abra** el archivo RDP descargado (ubicado en la parte inferior izquierda de la máquina de su laboratorio) y haga clic en **Conectar** cuando se le pida. 
 
@@ -66,11 +66,11 @@ En esta tarea nos conectaremos a nuestra nueva máquina virtual usando el RDP (e
 
 4. En la ventana **Seguridad de Windows**, inicie sesión con las credenciales de administrador que utilizó al crear el usuario **azureuser** y la contraseña **Pa$$w0rd1234** de la máquina virtual. 
 
-5. You may receive a warning certificate during the sign-in process. Click <bpt id="p1">**</bpt>Yes<ept id="p1">**</ept> or to create the connection and connect to your deployed VM. You should connect successfully.
+5. Es posible que reciba un certificado con una advertencia durante el proceso de inicio de sesión. Haga clic en **Sí** o cree la conexión y conéctese a la VM que ha implementado. Debería conectarse correctamente.
 
     ![Captura de pantalla del cuadro de diálogo de advertencia de certificado que informa al usuario de un certificado no confiable, con el botón Sí resaltado. ](../images/0104.png)
 
-A new Virtual Machine (myVM) will launch inside your Lab. Close the Server Manager and dashboard windows that pop up (click "x" at top right). You should see the blue background of your virtual machine. <bpt id="p1">**</bpt>Congratulations!<ept id="p1">**</ept> You have deployed and connected to a Virtual Machine running Windows Server. 
+Se iniciará una nueva máquina virtual (MiVM) en su laboratorio. Cierre las ventanas del Administrador de servidores y el panel del servidor que han aparecido (haga clic en la "x" de la esquina superior derecha). Debería ver el fondo de color azul de su máquina virtual. **¡Enhorabuena!** Ha implementado una máquina virtual que ejecuta Windows Server y se ha conectado a ella. 
 
 # <a name="task-3-install-the-web-server-role-and-test"></a>Tarea 3: Instalar el rol del servidor web y probarlo
 
@@ -80,13 +80,13 @@ En esta tarea, instale el rol Servidor web en el servidor de la máquina virtual
 
     ![Captura de pantalla del escritorio de la máquina virtual con el botón Inicio presionado y PowerShell seleccionado, con la opción Ejecutar como administrador resaltada.](../images/0105.png)
 
-2. In PowerShell, install the <bpt id="p1">**</bpt>Web-Server<ept id="p1">**</ept> feature on the virtual machine by running the following command. (Paste in the command and hit ENTER for the installment to begin).
+2. Instale la característica **Servidor web** en la máquina virtual. Para ello, ejecute el siguiente comando en PowerShell. (Pegue el comando y presione ENTRAR para que se inicie la instalación).
 
     ```PowerShell
     Install-WindowsFeature -name Web-Server -IncludeManagementTools
     ```
   
-3. When completed, a prompt will state <bpt id="p1">**</bpt>Success<ept id="p1">**</ept> with a value <bpt id="p2">**</bpt>True<ept id="p2">**</ept>. You do not need to restart the virtual machine to complete the installation. Close the RDP connection to the VM by clicking the <bpt id="p1">**</bpt>x<ept id="p1">**</ept> on the blue bar at the top center of your virtual machine. You can also minimize it by clicking the <bpt id="p1">**</bpt><ph id="ph1">-</ph><ept id="p1">**</ept> on the blue bar at the top center.
+3. Cuando complete este paso, aparecerá un aviso que indicará **Correcto** con el valor **Verdadero**. No es necesario que reinicie la máquina virtual para completar la instalación. Cierre la conexión RDP a la máquina virtual. Para ello, haga clic en la **x** que aparece en la barra azul de la parte superior central de la máquina virtual. También puede minimizarla si hace clic en el **-** que aparece en la barra azul de la parte superior central.
 
     ![Captura de pantalla del símbolo del sistema de Windows PowerShell con el comando Install-WindowsFeature -name Web-Server -IncludeManagementTools completado correctamente y la salida que indica que la operación ha tenido éxito.](../images/0106.png)
 
@@ -98,7 +98,7 @@ En esta tarea, instale el rol Servidor web en el servidor de la máquina virtual
 
     ![Captura de pantalla de la página principal predeterminada del servidor web IIS a la que se accede a través de la dirección IP pública en un explorador web.](../images/0108.png)
 
-<bpt id="p1">**</bpt>Congratulations!<ept id="p1">**</ept> You have created a new VM running a web server that is accessible via its public IP address. If you had a web application to host, you could deploy application files to the virtual machine and host them for public access on the deployed virtual machine.
+**¡Enhorabuena!** Ha creado una nueva máquina virtual que ejecuta un servidor web accesible a través de su dirección IP pública. Si tuviera una aplicación web para hospedar, podría implementar archivos de aplicación en la máquina virtual y hospedarlos para su acceso público en la máquina virtual implementada.
 
 
-<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click <bpt id="p1">**</bpt>Delete resource group<ept id="p1">**</ept>. Verify the name of the resource group and then click <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept>. Monitor the <bpt id="p1">**</bpt>Notifications<ept id="p1">**</ept> to see verify that the deletion completed successfully. 
+**Nota**: Para evitar costes adicionales, opcionalmente, puede quitar este grupo de recursos. Busque grupos de recursos, haga clic en su grupo de recursos y, luego, haga clic en **Eliminar grupo de recursos**. Compruebe el nombre del grupo de recursos y luego haga clic en **Eliminar**. Supervise las **Notificaciones** para comprobar que la eliminación se haya completado correctamente. 
