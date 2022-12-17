@@ -19,7 +19,7 @@ En esta tarea, creará una aplicación web de Azure App Service.
 
 3. En la pestaña **Datos básicos** de la hoja **Aplicación web**, especifique la siguiente configuración (reemplace **xxxx** en el nombre de la aplicación web por letras y dígitos para que el nombre sea único a nivel global). Deje los valores predeterminados para todo lo demás, incluido el plan de App Service. 
 
-    | Configuración | Valor |
+    | Configuración | Value |
     | -- | -- |
     | Subscription | **Usar los valores predeterminados** |
     | Grupo de recursos | **Crear un grupo de recursos**|

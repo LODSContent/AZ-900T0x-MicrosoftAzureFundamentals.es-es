@@ -19,7 +19,7 @@ Nota: Antes de comenzar el laboratorio, deshabilite el firewall público y priva
 
 3. En la pestaña **Datos básicos**, complete la siguiente información (deje los valores predeterminados para todo lo demás):
 
-    | Configuración | Valor | 
+    | Configuración | Value | 
     | --- | --- |
     | Subscription | **Deje los valores predeterminados** |
     | Grupo de recursos | **Crear un grupo de recursos** |
@@ -38,7 +38,7 @@ En esta tarea crearemos dos máquinas virtuales en la red virtual.
 
 2. En la pestaña **Datos básicos**, complete la siguiente información (deje los valores predeterminados para todo lo demás):
 
-   | Configuración | Valor | 
+   | Configuración | Value | 
    | --- | --- |
    | Subscription | **Usar los valores predeterminados** |
    | Grupo de recursos |  **Seleccionar el predeterminado en el menú desplegable** |
@@ -59,7 +59,7 @@ En esta tarea crearemos dos máquinas virtuales en la red virtual.
 
 6. Cree una segunda máquina virtual repitiendo los pasos anteriores del **2 al 4**. Asegúrese de usar un nombre de máquina virtual diferente, de que la máquina virtual está dentro de la misma red virtual y de que usa una nueva dirección IP pública:
 
-    | Configuración | Valor |
+    | Configuración | Value |
     | --- | --- |
     | Grupo de recursos | **seleccione valor predeterminado en el menú desplegable (igual que la tarea 1-3 y la tarea 2-2)** |
     | Nombre de la máquina virtual |  **vm2** |

@@ -18,7 +18,7 @@ En esta tarea, se creará una instancia de contenedor para la aplicación web.
 
 3. Dé los siguientes detalles básicos para la nueva instancia de contenedor (deje los valores predeterminados para todo lo demás): 
 
-    | Configuración| Valor|
+    | Configuración| Value|
     |----|----|
     | Subscription | ***Usar los valores predeterminados*** |
     | Grupo de recursos | **Crear un grupo de recursos** |

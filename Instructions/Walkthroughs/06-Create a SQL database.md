@@ -18,7 +18,7 @@ En esta tarea, crearemos una base de datos SQL basada en la base de datos de eje
 
 3. En la pestaña **Aspectos básicos**, rellene esta información.  
 
-    | Configuración | Valor | 
+    | Configuración | Value | 
     | --- | --- |
     | Subscription | **Usar los valores predeterminados** |
     | Grupo de recursos | **Crear un grupo de recursos** |

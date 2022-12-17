@@ -17,9 +17,9 @@ En esta tarea, asignaremos el rol de colaborador de la máquina virtual.
 
 3. Cree un nuevo grupo de recursos. Haga clic en **Crear** cuando haya acabado. 
 
-    | Configuración | Valor |
+    | Configuración | Value |
     | -- | -- |
-    | Suscripción | **Uso de los valores predeterminados** |
+    | Subscription | **Uso de los valores predeterminados** |
     | Grupo de recursos | **myRGRBAC** |
     | Region | **(EE. UU.) Este de EE. UU.** |
    

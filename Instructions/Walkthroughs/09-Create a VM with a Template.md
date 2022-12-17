@@ -27,7 +27,7 @@ En esta tarea, examinaremos la galería de inicio rápido de Azure e implementar
 
 7. Ahora configure los parámetros requeridos por la plantilla (reemplace ***xxxx*** del prefijo de la etiqueta DNS con letras y dígitos de modo que la etiqueta sea globalmente única). Deje los valores predeterminados para todo lo demás. 
 
-    | Configuración| Valor|
+    | Configuración| Value|
     |----|----|
     | Subscription | **Mantener los valores predeterminados**|
     | Grupo de recursos | **Crear un grupo de recursos** |

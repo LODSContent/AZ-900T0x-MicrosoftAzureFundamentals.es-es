@@ -17,7 +17,7 @@ En esta tarea crearemos una nueva cuenta de almacenamiento.
 
 3. En la pestaña **Datos básicos** de la hoja **Crear cuenta de almacenamiento**, complete la siguiente información (reemplace **xxxx** en el nombre de la cuenta de almacenamiento con letras y dígitos de modo que el nombre sea único a nivel global). Deje los valores predeterminados para todo lo demás.
 
-    | Configuración | Valor | 
+    | Configuración | Value | 
     | --- | --- |
     | Subscription | **Deje el valor predeterminado** |
     | Grupo de recursos | **Crear un grupo de recursos** |
@@ -45,7 +45,7 @@ En esta tarea, crearemos un contenedor de blobs y subiremos un archivo de blobs.
 2. Haga clic en **+ Contenedor** y complete la información. Use los iconos de información para obtener más información. Cuando termine, haga clic en **Crear**.
 
 
-    | Configuración | Valor |
+    | Configuración | Value |
     | --- | --- |
     | Nombre | **Contenedor1**  |
     | Nivel de acceso público| **Privado (sin acceso anónimo)** |

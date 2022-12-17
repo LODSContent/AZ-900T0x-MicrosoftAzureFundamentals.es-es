@@ -24,7 +24,7 @@ En esta tarea, agregaremos un bloqueo de recursos al grupo de recursos y probare
 
 5. Configure el nuevo bloqueo. Al finalizar, haga clic en **Aceptar**. 
 
-    | Configuración | Valor |
+    | Configuración | Value |
     | -- | -- |
     | Nombre del bloqueo | "RGLock" |
     | Tipo de bloqueo | **Eliminar** |
@@ -42,7 +42,7 @@ En esta tarea, probaremos si el bloqueo de recursos protege una cuenta de almace
 
 2. En el panel **+Agregar, +Nuevo, o +Crear** de la página **Cuentas de almacenamiento**, complete la siguiente información (reemplace **xxxx** en el nombre de la cuenta de almacenamiento con letras y dígitos de modo que el nombre sea único a nivel global). Deje los valores predeterminados para todo lo demás.
 
-    | Configuración | Valor | 
+    | Configuración | Value | 
     | --- | --- |
     | Suscripción | **Seleccione la suscripción** |
     | Grupo de recursos | **myRGLocks** |

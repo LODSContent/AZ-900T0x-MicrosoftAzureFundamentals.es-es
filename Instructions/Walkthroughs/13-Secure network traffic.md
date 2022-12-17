@@ -61,7 +61,7 @@ En esta tarea, crearemos un grupo de seguridad de red y lo asociaremos con la in
 
 2. En la pestaña **Datos básicos** de la hoja **Crear grupo de seguridad de red**, especifique la siguiente configuración.
 
-    | Configuración | Valor |
+    | Configuración | Value |
     | -- | -- |
     | Subscription | **Utilizar la suscripción predeterminada** |
     | Grupo de recursos | **Seleccionar el predeterminado en el menú desplegable** |
@@ -93,7 +93,7 @@ En esta tarea, permitiremos el tráfico RDP a la máquina virtual mediante la co
 
 5. Sobre la pestaña **Reglas de puerto de entrada**, haga clic en **Agregar regla de puerto de entrada** . Haga clic en **Agregar** cuando haya acabado. 
 
-    | Configuración | Valor |
+    | Configuración | Value |
     | -- | -- |
     | Source | **Cualquiera**|
     | Source port ranges | **\*** |
@@ -126,7 +126,7 @@ En esta tarea, crearemos una regla de puerto saliente NSG que denegará el acces
 
 7. Haga clic en **Agregar regla de puerto de salida**, a la derecha del grupo de seguridad de red **myNSGSecure (conectado a la interfaz de red: myVMNic)** y configure una nueva regla de seguridad saliente con una prioridad más alta que denegará el tráfico de Internet. Haga clic en **Agregar** cuando haya acabado. 
 
-    | Configuración | Valor |
+    | Configuración | Value |
     | -- | -- |
     | Source | **Cualquiera**|
     | Source port ranges | **\*** |

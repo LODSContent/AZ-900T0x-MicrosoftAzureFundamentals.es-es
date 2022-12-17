@@ -40,9 +40,9 @@ En esta tarea crearemos cuentas de almacenamiento para probar el etiquetado requ
 
 2. En la pestaña **Datos básicos** de la hoja **Crear cuenta de almacenamiento**, complete la siguiente información (reemplace **xxxx** en el nombre de la cuenta de almacenamiento con letras y dígitos de modo que el nombre sea único a nivel global). Deje los valores predeterminados para todo lo demás.
 
-    | Configuración | Valor | 
+    | Configuración | Value | 
     | --- | --- |
-    | Suscripción | **Uso de los valores predeterminados** |
+    | Subscription | **Uso de los valores predeterminados** |
     | Resource group | **Crear un grupo de recursos** |
     | Nombre de la cuenta de almacenamiento | **storageaccountxxxx** |
     | Location | **(EE. UU.) Este de EE. UU.** |

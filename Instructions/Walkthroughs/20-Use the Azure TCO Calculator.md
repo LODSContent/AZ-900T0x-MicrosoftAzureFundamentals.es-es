@@ -54,7 +54,7 @@ En esta tarea agregaremos información de infraestructura a la calculadora.
     | Tipo de almacenamiento | **Disco local/SAN** |
     | Tipo de disco | **HDD** |
     | Capacity | **60 TB** |  
-    | Copia de seguridad | **120 TB** |
+    | Backup | **120 TB** |
     | Archivar | **0 TB** |
 
 5. En el panel **Redes**, agregue el ancho de banda. 

@@ -46,7 +46,7 @@ En esta tarea probaremos la directiva de Ubicación permitida.
 
 2. Configure la cuenta de almacenamiento (reemplace **xxxx** en el nombre de la cuenta de almacenamiento con letras y dígitos de modo que el nombre sea único a nivel global). Deje los valores predeterminados para todo lo demás. 
 
-    | Configuración | Valor | 
+    | Configuración | Value | 
     | --- | --- |
     | Subscription | **Usar los valores predeterminados** |
     | Grupo de recursos | **myRGPolicy** (crear nuevo) |

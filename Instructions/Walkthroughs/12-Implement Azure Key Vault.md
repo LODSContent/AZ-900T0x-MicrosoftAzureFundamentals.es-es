@@ -15,7 +15,7 @@ En este tutorial, crearemos una instancia de Azure Key Vault y luego crearemos
 
 3. Configure el almacén de claves (reemplace **xxxx** en el nombre del almacén de claves con letras y dígitos de manera que el nombre sea único a nivel global). Deje los valores predeterminados para todo lo demás.
 
-    | Configuración | Valor | 
+    | Configuración | Value | 
     | --- | --- |
     | Subscription | **Usar los valores predeterminados** |
     | Grupo de recursos | **Crear un grupo de recursos** |
